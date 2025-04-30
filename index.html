@@ -2,10 +2,88 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Álvaro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      padding: 40px;
+    }
+    .bio, .projects {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .bio h2, .projects h2 {
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, soy Álvaro</h1>
-  <p>Bienvenido a mi sitio web personal.</p>
+  <header>
+    <h1><i class="fas fa-laptop-code"></i> ¡Hola! Soy Álvaro</h1>
+    <p>Desarrollador Web y Móvil</p>
+  </header>
+
+  <div class="container">
+    <div class="bio">
+      <h2>Sobre mí</h2>
+      <p>Soy un desarrollador apasionado por la tecnología...</p>
+    </div>
+    <div class="projects">
+      <h2>Proyectos</h2>
+      <div class="card">
+        <h3>Proyecto 1</h3>
+        <p>Descripción del proyecto...</p>
+        <a href="#">Ver más</a>
+      </div>
+      <div class="card">
+        <h3>Proyecto 2</h3>
+        <p>Descripción del proyecto...</p>
+        <a href="#">Ver más</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contacto: tuemail@dominio.com</p>
+  </footer>
 </body>
 </html>
