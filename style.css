@@ -1,10 +1,18 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
 }
 
+/* Estilo para el cuerpo */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Estilo para el encabezado */
 header {
-  background-image: url('img/header-bg.jpg'); /* Imagen en carpeta /img */
+  background-image: url('img/header-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +20,100 @@ header {
   text-align: center;
   padding: 60px 20px;
 }
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Sección de contenido */
+.section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Estilo para los proyectos (tarjetas) */
+.projects .card {
+  background: #fdfdfd;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.card p {
+  margin: 0 0 10px;
+}
+
+.card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del pie de página */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .bio {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .projects {
+    flex: 2;
+  }
+}
+
+/* Estilo del botón de descarga */
 .download-btn {
   display: inline-block;
   margin-top: 20px;
@@ -29,7 +131,7 @@ header {
   background-color: #0056b3;
 }
 
+/* Alineación del botón dentro de la sección 'bio' */
 .bio .download-btn {
-  float: left; /* Usa right si prefieres alinearlo a la derecha */
+  float: left; /* Usa 'right' si prefieres alinearlo a la derecha */
 }
-
