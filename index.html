@@ -1,68 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio de Álvaro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f9;
     }
+
     header {
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 60px 20px;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
     .container {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 20px;
-      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .bio, .projects {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    .section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
-    .bio h2, .projects h2 {
+
+    .section h2 {
+      margin-top: 0;
       color: #333;
     }
-    .card {
-      background: white;
+
+    .projects .card {
+      background: #fdfdfd;
       padding: 20px;
-      margin: 10px;
+      margin-top: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
       transition: transform 0.3s ease;
     }
+
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-6px);
     }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: #222;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+    }
+
+    .card a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px;
+      margin-top: 60px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .bio {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .projects {
+        flex: 2;
+      }
     }
   </style>
 </head>
 <body>
- <header>
-  <h1><i class="fas fa-laptop-code"></i> Álvaro Domínguez Mora</h1>
-  <p>Desarrollador Web y Móvil</p>
-</header>
+
+  <header>
+    <h1><i class="fas fa-laptop-code"></i> Álvaro Domínguez Mora</h1>
+    <p>Desarrollador Web y Móvil</p>
+  </header>
+
   <div class="container">
-    <div class="bio">
+    <div class="section bio">
       <h2>Sobre mí</h2>
       <p>¡Hola! Soy Álvaro, un amante de la informática que vive y respira tecnología.
          Desde pequeño, me ha fascinado el mundo de la programación, el diseño de sistemas y descubrir lo último en innovación.
@@ -70,7 +130,8 @@
          La tecnología tiene el superpoder de transformar el mundo, y eso es lo que más me motiva. 
          No soy solo un graduado en informática, ¡soy un explorador digital con ganas de hacer que el mundo sea un lugar más genial gracias a la tecnología!</p>
     </div>
-    <div class="projects">
+
+    <div class="section projects">
       <h2>Proyectos</h2>
       <div class="card">
         <h3>Proyecto 1</h3>
@@ -86,7 +147,8 @@
   </div>
 
   <footer>
-    <p>Contacto: tuemail@dominio.com</p>
+    <p>Contacto: alvarodm76@gmail.com</p>
   </footer>
+
 </body>
 </html>
