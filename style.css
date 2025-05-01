@@ -57,12 +57,14 @@ header p {
 }
 
 .profile img {
-  width: 180px;  /* Ajustado para tamaño más adecuado */
-  height: 180px; /* Tamaño cuadrado */
+  width: 100%;
+  max-width: 200px; /* Limita el tamaño máximo */
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .profile-text {
   flex: 1;
