@@ -135,7 +135,6 @@ header p {
 }
 
 /* ------------------------------------ FOOTER ------------------------------------ */
-/* ------------------------------------ FOOTER ------------------------------------ */
 footer {
   background-color: #1f1f1f;
   color: #ffffff;
@@ -148,7 +147,7 @@ footer {
 }
 
 footer p {
-  margin: 15px 0;
+  margin: 10px 0;  /* Margen reducido para que los elementos no estén tan separados */
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
@@ -174,12 +173,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Icono de LinkedIn más grande y centrado justo debajo del correo y teléfono */
+/* Icono de LinkedIn grande y ajustado a los otros elementos */
 .linkedin-icon {
   display: inline-block;
-  font-size: 3.5rem; /* Tamaño grande */
+  font-size: 4rem;  /* Icono más grande */
   color: #0077b5;
-  margin-top: 12px;  /* Espacio más pequeño entre los elementos */
+  margin-top: 10px;  /* Añado solo un pequeño margen superior */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -187,6 +186,7 @@ footer a:hover {
   color: #005582;
   transform: scale(1.1);
 }
+
 
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
