@@ -7,6 +7,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .header-content p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 1.5rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .download-btn i {
+      margin-right: 0.5rem;
+    }
+
+    nav {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -16,58 +75,20 @@
   </div>
 </header>
 
-<div class="container">
-  <section class="bio section">
-    <h2>Sobre mí</h2>
-    <p>Soy Álvaro Domínguez Mora, desarrollador full stack con sólida formación en ingeniería informática. Apasionado por la tecnología desde temprana edad, he orientado mi carrera al desarrollo de soluciones eficientes, escalables y con impacto real en los procesos digitales. 
-    Me especializo en el diseño y desarrollo de aplicaciones web y móviles, combinando una mentalidad analítica con un enfoque creativo e innovador. Trabajo con metodologías ágiles y me esfuerzo constantemente por evolucionar profesionalmente a través de proyectos desafiantes.</p>
-    <a href="info/CV.pdf" download class="download-btn"><i class="fas fa-download"></i> Descargar CV</a>
-  </section>
-
-  <section class="projects section">
-    <h2>Proyectos Destacados</h2>
-
-    <div class="card">
-      <h3>App móvil de gestión de rutas turísticas</h3>
-      <p>Desarrollo de una aplicación modular y escalable con frontend en Kotlin (Android) y backend en Django REST. Incluye sistema de autenticación y control de acceso según el rol del usuario (visitante, creador o administrador), ofreciendo una experiencia personalizada.</p>
-      <a href="#">Ver más</a>
-    </div>
-
-    <div class="card">
-      <h3>Gestor web de tareas y productividad</h3>
-      <p>Implementación backend en Spring Boot bajo arquitectura hexagonal. Enfoque centrado en la mantenibilidad, pruebas unitarias y despliegue continuo. Proyecto desarrollado en equipo utilizando GitHub y metodología Scrum.</p>
-      <a href="#">Ver más</a>
-    </div>
-
-    <div class="card">
-      <h3>Plataforma de gestión académica – ACMEDANCE</h3>
-      <p>Aplicación web orientada a la gestión integral de academias. Desarrollada con Java, Spring Framework y Maven. Arquitectura modular, integración con Hibernate y despliegue en Tomcat. Incorporación de prácticas ágiles y control de versiones.</p>
-      <a href="#">Ver más</a>
-    </div>
-
-    <div class="card">
-      <h3>Sistema de administración de centros deportivos</h3>
-      <p>Plataforma completa para la gestión de gimnasios. Frontend con HTML, CSS y JavaScript, backend en Spring Boot. Migración de base de datos de Oracle a MariaDB con integración ORM a través de Hibernate. Control de versiones con Git y despliegue en Apache Tomcat.</p>
-      <a href="#">Ver más</a>
-    </div>
-  </section>
+<div style="text-align: center;">
+  <a href="info/CV.pdf" download class="download-btn">
+    <i class="fas fa-download"></i> Descargar CV
+  </a>
 </div>
 
-<footer>
-  <p>
-    <i class="fas fa-envelope"></i>
-    <span>alvarodm76@gmail.com</span>
-  </p>
-  <p>
-    <i class="fas fa-phone-alt"></i>
-    <span>653 49 26 50</span>
-  </p>
-  <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" 
-     target="_blank" 
-     class="linkedin-icon" 
-     aria-label="LinkedIn de Álvaro Domínguez">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</footer>
+<nav>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#experiencia">Experiencia</a>
+  <a href="#educacion">Educación</a>
+  <a href="#certificaciones">Certificaciones</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 </body>
 </html>
