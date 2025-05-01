@@ -1,16 +1,18 @@
+/* ------------------------------------ RESET ------------------------------------ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Estilo para el cuerpo */
+/* ------------------------------------ GLOBAL STYLES ------------------------------------ */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f9;
+  color: #333;
 }
 
-/* Estilo para el encabezado */
+/* ------------------------------------ HEADER ------------------------------------ */
 header {
   background-image: url('img/header-bg.jpg');
   background-size: cover;
@@ -32,7 +34,7 @@ header p {
   color: #ddd;
 }
 
-/* Contenedor principal */
+/* ------------------------------------ CONTAINER ------------------------------------ */
 .container {
   display: flex;
   flex-direction: column;
@@ -42,12 +44,12 @@ header p {
   margin: auto;
 }
 
-/* Sección de contenido */
+/* ------------------------------------ SECTION ------------------------------------ */
 .section {
   background-color: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .section h2 {
@@ -55,66 +57,12 @@ header p {
   color: #333;
 }
 
-/* Estilo para los proyectos (tarjetas) */
-.projects .card {
-  background: #fdfdfd;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+/* ------------------------------------ BIO SECTION ------------------------------------ */
+.bio {
+  flex: 1;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h3 {
-  margin: 0 0 10px;
-  color: #222;
-}
-
-.card p {
-  margin: 0 0 10px;
-}
-
-.card a {
-  color: #007BFF;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* Estilo del pie de página */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 60px;
-}
-
-/* Estilos responsivos */
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
-
-  .bio {
-    flex: 1;
-    margin-right: 20px;
-  }
-
-  .projects {
-    flex: 2;
-  }
-}
-
-/* Estilo del botón de descarga */
-.download-btn {
+.bio .download-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 20px;
@@ -127,11 +75,63 @@ footer {
   width: auto;
 }
 
-.download-btn:hover {
+.bio .download-btn:hover {
   background-color: #0056b3;
 }
 
-/* Alineación del botón dentro de la sección 'bio' */
-.bio .download-btn {
-  float: left; /* Usa 'right' si prefieres alinearlo a la derecha */
+/* ------------------------------------ PROJECTS SECTION ------------------------------------ */
+.projects {
+  flex: 2;
+}
+
+.projects .card {
+  background: #fdfdfd;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.projects .card:hover {
+  transform: translateY(-6px);
+}
+
+.projects .card h3 {
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.projects .card p {
+  margin: 0 0 10px;
+}
+
+.projects .card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.projects .card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------ FOOTER ------------------------------------ */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+/* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .bio {
+    margin-right: 20px;
+  }
 }
