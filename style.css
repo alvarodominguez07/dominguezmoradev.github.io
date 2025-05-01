@@ -125,16 +125,23 @@ footer {
   padding: 15px;
   margin-top: 60px;
 }
+.linkedin-icon {
+  position: absolute;
+  top: 20px; /* Ajusta según sea necesario */
+  right: 20px; /* Ubícalo en la esquina superior derecha */
+  font-size: 2.5rem; /* Tamaño del ícono */
+  color: #0077b5; /* Color típico de LinkedIn */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.linkedin-icon:hover {
+  color: #005582; /* Cambio de color al pasar el cursor */
+}
+
 .linkedin-icon i {
-  font-size: 3rem; /* Aumenta el tamaño del ícono */
-  color: #0077b5; /* Color característico de LinkedIn */
-  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-size: 2.5rem; /* Ajusta el tamaño del ícono */
 }
-
-.linkedin-icon:hover i {
-  color: #005582; /* Cambia el color cuando el usuario pasa el cursor */
-}
-
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
   .container {
