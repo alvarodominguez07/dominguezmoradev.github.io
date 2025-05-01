@@ -20,29 +20,31 @@ header {
   background-repeat: no-repeat;
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  width: 100%; /* Mantiene el ancho completo del contenedor */
+  padding: 80px 20px;
+  width: 100%;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 header p {
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #ddd;
+  font-style: italic;
 }
 
 /* ------------------------------------ CONTAINER ------------------------------------ */
 .container {
   display: flex;
-  flex-direction: row; /* Organiza las secciones horizontalmente */
+  flex-wrap: wrap;
   gap: 40px;
   padding: 40px 20px;
-  max-width: 1000px; /* Establece un ancho máximo para centrar el contenido */
-  margin: auto; /* Centra la caja */
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* ------------------------------------ SECTION ------------------------------------ */
@@ -51,16 +53,25 @@ header p {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px);
 }
 
 .section h2 {
   margin-top: 0;
   color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 /* ------------------------------------ BIO SECTION ------------------------------------ */
 .bio {
-  flex: 1; /* Toma una proporción de 1 en el contenedor */
+  flex: 1;
+  min-width: 280px;
 }
 
 .bio .download-btn {
@@ -82,7 +93,8 @@ header p {
 
 /* ------------------------------------ PROJECTS SECTION ------------------------------------ */
 .projects {
-  flex: 2; /* Toma una proporción de 2 en el contenedor */
+  flex: 2;
+  min-width: 280px;
 }
 
 .projects .card {
@@ -91,20 +103,24 @@ header p {
   margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .projects .card h3 {
   margin: 0 0 10px;
   color: #222;
+  font-size: 1.6rem;
 }
 
 .projects .card p {
   margin: 0 0 10px;
+  font-size: 1rem;
+  color: #555;
 }
 
 .projects .card a {
@@ -115,6 +131,7 @@ header p {
 
 .projects .card a:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
 
 /* ------------------------------------ FOOTER ------------------------------------ */
@@ -122,44 +139,63 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 25px 20px;
   margin-top: 60px;
 }
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
 .linkedin-icon {
   position: absolute;
-  top: 20px; /* Ajusta según sea necesario */
-  right: 20px; /* Ubícalo en la esquina superior derecha */
-  font-size: 2.5rem; /* Tamaño del ícono */
-  color: #0077b5; /* Color típico de LinkedIn */
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #0077b5;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .linkedin-icon:hover {
-  color: #005582; /* Cambio de color al pasar el cursor */
+  color: #005582;
 }
 
 .linkedin-icon i {
-  font-size: 2.5rem; /* Ajusta el tamaño del ícono */
+  font-size: 2.5rem;
 }
+
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
   .container {
-    flex-direction: row; /* Se asegura de que las secciones estén en una fila */
+    flex-direction: row;
   }
 
   .bio {
-    margin-right: 20px; /* Agrega espacio entre la sección de bio y proyectos */
+    margin-right: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* En pantallas pequeñas, las secciones se apilan verticalmente */
+    flex-direction: column;
     gap: 20px;
   }
 
   .bio, .projects {
-    flex: unset; /* No toma proporciones fijas en pantallas pequeñas */
+    flex: unset;
+  }
+
+  header {
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
   }
 }
