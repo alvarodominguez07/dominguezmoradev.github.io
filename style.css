@@ -21,6 +21,7 @@ header {
   color: white;
   text-align: center;
   padding: 60px 20px;
+  width: 100%; /* Mantiene el ancho completo del contenedor */
 }
 
 header h1 {
@@ -40,8 +41,8 @@ header p {
   flex-direction: column;
   gap: 40px;
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1000px; /* Establece un ancho máximo para centrar el contenido */
+  margin: auto; /* Centra la caja */
 }
 
 /* ------------------------------------ SECTION ------------------------------------ */
