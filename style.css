@@ -136,42 +136,46 @@ header p {
 
 /* ------------------------------------ FOOTER ------------------------------------ */
 footer {
-  background: #333;
-  color: #fff;
+  background-color: #1f1f1f;
+  color: #ffffff;
   text-align: center;
-  padding: 25px 20px;
+  padding: 40px 20px;
   margin-top: 60px;
-  position: relative;
+  font-family: 'Roboto', sans-serif;
+  border-top: 2px solid #444;
 }
 
 footer p {
-  margin-bottom: 10px;
-  font-size: 1rem;
+  margin: 15px 0;
+  font-size: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 footer i {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  color: #ffffff;
 }
 
 footer a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 footer a:hover {
+  color: #cccccc;
   text-decoration: underline;
 }
 
 .linkedin-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #0077b5;
+  font-weight: 600;
   transition: color 0.3s ease;
-  text-decoration: none;
-  margin-left: 8px;
 }
 
 .linkedin-icon:hover {
