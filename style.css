@@ -133,6 +133,44 @@ header p {
   text-decoration: underline;
   color: #0056b3;
 }
+.main-menu {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+}
+
+.main-menu li a:hover {
+  color: #007BFF;
+}
+
+.main-menu i {
+  font-size: 1.1rem;
+}
 
 /* ------------------------------------ FOOTER ------------------------------------ */
 footer {
