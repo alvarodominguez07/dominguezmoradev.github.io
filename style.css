@@ -38,7 +38,7 @@ header p {
 /* ------------------------------------ CONTAINER ------------------------------------ */
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Organiza las secciones horizontalmente */
   gap: 40px;
   padding: 40px 20px;
   max-width: 1000px; /* Establece un ancho máximo para centrar el contenido */
@@ -60,7 +60,7 @@ header p {
 
 /* ------------------------------------ BIO SECTION ------------------------------------ */
 .bio {
-  flex: 1;
+  flex: 1; /* Toma una proporción de 1 en el contenedor */
 }
 
 .bio .download-btn {
@@ -82,7 +82,7 @@ header p {
 
 /* ------------------------------------ PROJECTS SECTION ------------------------------------ */
 .projects {
-  flex: 2;
+  flex: 2; /* Toma una proporción de 2 en el contenedor */
 }
 
 .projects .card {
@@ -138,10 +138,21 @@ footer {
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
   .container {
-    flex-direction: row;
+    flex-direction: row; /* Se asegura de que las secciones estén en una fila */
   }
 
   .bio {
-    margin-right: 20px;
+    margin-right: 20px; /* Agrega espacio entre la sección de bio y proyectos */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* En pantallas pequeñas, las secciones se apilan verticalmente */
+    gap: 20px;
+  }
+
+  .bio, .projects {
+    flex: unset; /* No toma proporciones fijas en pantallas pequeñas */
   }
 }
