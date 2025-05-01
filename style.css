@@ -143,10 +143,11 @@ footer {
   margin-top: 60px;
   font-family: 'Roboto', sans-serif;
   border-top: 2px solid #444;
+  letter-spacing: 0.5px;
 }
 
 footer p {
-  margin: 15px 0;
+  margin: 18px 0;
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
@@ -164,23 +165,28 @@ footer a {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 footer a:hover {
-  color: #cccccc;
+  color: #bbbbbb;
   text-decoration: underline;
 }
 
+/* Estilo exclusivo del icono de LinkedIn */
 .linkedin-icon {
-  font-size: 1.6rem;
+  display: inline-block;
+  font-size: 2.8rem;
   color: #0077b5;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-top: 20px;
 }
 
 .linkedin-icon:hover {
   color: #005582;
+  transform: scale(1.15);
 }
+
 
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
