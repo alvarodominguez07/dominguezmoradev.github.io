@@ -7,49 +7,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
- 
 </head>
 <body>
 
   <header>
-    <h1><i class="fas fa-laptop-code"></i> Álvaro Domínguez Mora</h1>
-    <p>Full Stack Developer</p>
+    <div class="header-content">
+      <h1><i class="fas fa-laptop-code"></i> Álvaro Domínguez Mora</h1>
+      <p>Full Stack Developer</p>
+    </div>
   </header>
 
   <div class="container">
-    <div class="section bio">
+    <section class="bio">
       <h2>Sobre mí</h2>
-      <p>¡Hola! Soy Álvaro, un amante de la informática que vive y respira tecnología.
-         Desde pequeño, me ha fascinado el mundo de la programación, el diseño de sistemas y descubrir lo último en innovación.
-         Siempre estoy buscando nuevos retos para seguir aprendiendo y mejorar mis habilidades.
-         La tecnología tiene el superpoder de transformar el mundo, y eso es lo que más me motiva. 
-         No soy solo un graduado en informática, ¡soy un explorador digital con ganas de hacer que el mundo sea un lugar más genial gracias a la tecnología!</p>
+      <p>¡Hola! Soy Álvaro, un amante de la informática que vive y respira tecnología...</p>
       <a href="info/CV.pdf" download class="download-btn"><i class="fas fa-download"></i> Descargar CV</a>
-    </div>
-  
-    <div class="section projects">
+    </section>
+
+    <section class="projects">
       <h2>Proyectos</h2>
-      <div class="card">
-        <h3>Aplicación Movil basada en la gestion de rutas turísticas</h3>
-        <p> Es una app móvil modular y escalable, con un frontend en Kotlin para Android y un backend en Django con API RESTful. Incluye autenticación y control de acceso por roles (usuario, creador o administrador), adaptando las funciones según el perfil.</p>
-        <a href="#">Ver más</a>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Aplicación Móvil - Rutas Turísticas</h3>
+          <p>App móvil modular, escalable, frontend en Kotlin y backend en Django...</p>
+          <a href="#">Ver más</a>
+        </div>
+        <div class="card">
+          <h3>Gestión de Tareas</h3>
+          <p>Aplicación web backend en Spring Boot con arquitectura hexagonal...</p>
+          <a href="#">Ver más</a>
+        </div>
+        <div class="card">
+          <h3>Gestión Académica - ACMEDANCE</h3>
+          <p>Desarrollo de una app web para gestión integral de una academia de baile...</p>
+          <a href="#">Ver más</a>
+        </div>
+        <div class="card">
+          <h3>Sistema de Administración de Gimnasios</h3>
+          <p>Gestión de centros deportivos, frontend en HTML/CSS/JS y backend en Spring Boot...</p>
+          <a href="#">Ver más</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Aplicación Web de Gestión de Tareas</h3>
-        <p> Diseñé e implementé el backend con Spring Boot usando arquitectura hexagonal para asegurar escalabilidad y mantenibilidad. Utilicé GitHub para el control de versiones y apliqué la metodología ágil Scrum para una gestión eficiente y entregas incrementales.</p>
-        <a href="#">Ver más</a>
-      </div>
-       <div class="card">
-        <h3>Aplicación Web de Gestión Académica – ACMEDANCE</h3>
-        <p> Desarrollo de una aplicación web para la gestión integral de una academia de baile, basada en Java y Spring, con arquitectura modular orientada a la escalabilidad y mantenibilidad. Se utilizaron Maven, Hibernate y Tomcat, junto con GitHub para control de versiones y prácticas ágiles con pruebas unitarias para asegurar la calidad del software.</p>
-        <a href="#">Ver más</a>
-      </div>
-       <div class="card">
-        <h3>Sistema de Administración de Gimnasios</h3>
-        <p> Desarrollo de una aplicación web para la gestión de centros deportivos, con frontend en HTML, CSS y JavaScript, y backend en Spring Boot siguiendo el patrón MVC. La base de datos pasó de Oracle MariaDB a Hibernate para una gestión ORM eficiente. La app se desplegó en Apache Tomcat y se gestionó con GitHub, aplicando buenas prácticas de control de versiones y colaboración.</p>
-        <a href="#">Ver más</a>
-      </div>
-    </div>
+    </section>
   </div>
 
   <footer>
