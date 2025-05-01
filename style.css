@@ -39,6 +39,7 @@ header p {
 /* ------------------------------------ NUEVA SECCIÓN SOBRE MÍ ------------------------------------ */
 .about-container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 40px;
   padding: 60px 20px;
@@ -48,27 +49,32 @@ header p {
 
 .profile {
   flex: 1;
-  min-width: 280px;
-  text-align: center;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .profile img {
-  width: 100%;
-  max-width: 300px;
+  width: 220px;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 20px;
+  object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile .description {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 20px;
-  line-height: 1.6;
+.profile-text {
+  flex: 1;
 }
 
-.profile .download-btn {
+.profile-text .description {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.profile-text .download-btn {
   display: inline-block;
   padding: 12px 20px;
   background-color: #007BFF;
@@ -79,10 +85,9 @@ header p {
   transition: background-color 0.3s ease;
 }
 
-.profile .download-btn:hover {
+.profile-text .download-btn:hover {
   background-color: #0056b3;
 }
-
 /* ------------------------------------ TARJETAS DE MENÚ ------------------------------------ */
 .menu-cards {
   flex: 1;
@@ -122,12 +127,21 @@ header p {
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
 
-  .profile,
-  .menu-cards {
-    flex: unset;
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .profile-text {
+    width: 100%;
   }
 }
 /* ------------------------------------ CONTAINER ------------------------------------ */
