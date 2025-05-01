@@ -13,6 +13,7 @@ html, body {
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f9;
+   overflow-x: hidden;
   color: #333;
 }
 
@@ -62,8 +63,9 @@ header p {
 }
 
 .profile img {
+  display: block;
   max-width: 100%;
-  width: 180px;
+  width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -361,3 +363,9 @@ footer a:hover {
     margin-right: 20px;
   }
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
