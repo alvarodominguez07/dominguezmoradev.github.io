@@ -167,15 +167,16 @@ footer a:hover {
 }
 
 .linkedin-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #0077b5;
   transition: color 0.3s ease;
+  text-decoration: none;
+  margin-left: 8px;
 }
 
 .linkedin-icon:hover {
   color: #005582;
 }
-
 
 /* ------------------------------------ RESPONSIVE STYLES ------------------------------------ */
 @media (min-width: 768px) {
