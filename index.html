@@ -124,6 +124,17 @@
     .back-btn:hover {
       background-color: #004a99;
     }
+    .motivacion-img {
+    max-width: 70%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .motivacion-img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más destacada al hacer hover */
+  }
   </style>
 </head>
 <body>
@@ -307,11 +318,12 @@
           <br><br>
           Mi motivación es alta, tengo muchas ganas de aprender, crecer y afrontar este primer desafío profesional. Estoy preparado para poner en práctica lo aprendido y aportar todo lo que sé y lo que soy capaz de hacer.
         </div>
-
-        <!-- Imagen motivacional -->
+        
+       <!-- Imagen motivacional -->
         <div style="text-align: center; margin-top: 20px;">
-          <img src="img/motivacion.png" alt="Motivación" style="max-width: 100%; height: auto; border-radius: 10px;">
+          <img src="img/motivacion.jpg" alt="Motivación" style="max-width: 70%; height: auto; border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
         </div>
+
 
         <div style="text-align: center; margin-top: 40px;">
           <a href="#" class="back-btn" id="back-btn-experiencia" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
