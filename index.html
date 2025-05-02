@@ -196,34 +196,40 @@
       event.preventDefault();
       var mainContent = document.getElementById("main-content");
       mainContent.innerHTML = `
-        <div class="about-me">
-          <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-            <i class="fas fa-graduation-cap"></i> Educación
-          </h2>
-
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-
-            <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-              <img src="img/UHU.png" alt="Universidad de Huelva" style="width: 80px; margin-bottom: 15px;">
-              <h3 style="color: #1e2a38;">Grado en Ingeniería Informática</h3>
+      <div class="about-me">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i> Educación
+        </h2>
+    
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+    
+          <!-- Universidad de Huelva -->
+          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
+            <img src="img/UHU.png" alt="Universidad de Huelva" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
+            <h3 style="color: #1e2a38; text-align: center;">Grado en Ingeniería Informática</h3>
+            <div style="text-align: center;">
               <p style="color: #444;">Universidad de Huelva</p>
               <p style="font-size: 0.95rem; color: #666;">Modalidad: Ingeniería del Software</p>
               <p style="font-size: 0.9rem; color: #999;">Octubre 2019 - Julio 2024</p>
             </div>
-
-            <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-              <img src="img/APTIS.png" alt="British Council" style="width: 100px; margin-bottom: 15px;">
-              <h3 style="color: #1e2a38;">Certificación Oficial APTIS</h3>
-              <p style="color: #444;">British Council</p>
-              <p style="font-size: 0.95rem; color: #666;">Nivel C1 (MCERL)</p>
-              <p style="font-size: 0.9rem; color: #999;">Año de obtención: 2023</p>
-            </div>
-
           </div>
-
-          <a href="#" class="back-btn" id="back-btn-educacion">Volver</a>
+    
+          <!-- Certificación APTIS -->
+          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
+            <img src="img/APTIS.png" alt="British Council" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
+            <h3 style="color: #1e2a38; text-align: center;">Certificación Oficial APTIS</h3>
+            <div style="text-align: center;">
+              <p style="color: #444;">British Council</p>
+              <p style="font-size: 0.95rem; color: #666;">Nivel B1 (MCERL)</p>
+              <p style="font-size: 0.9rem; color: #999;">Febrero 2024 - Abril 2024</p>
+            </div>
+          </div>
+    
         </div>
-      `;
+    
+        <a href="#" class="back-btn" id="back-btn-educacion" style="display: inline-block; margin-top: 40px; color: #fff; background-color: #007BFF; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver</a>
+      </div>
+    `;
 
       // Botón "Volver" para sección Educación
       document.getElementById("back-btn-educacion").addEventListener("click", function() {
