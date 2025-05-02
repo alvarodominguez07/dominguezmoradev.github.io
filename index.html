@@ -191,128 +191,139 @@
         window.location.reload(); // Esto recarga la página y vuelve al contenido inicial
       });
     });
-        // JavaScript para manejar el clic en "Educación"
-    document.querySelector('a[href="#educacion"]').addEventListener("click", function(event) {
-      event.preventDefault();
-      var mainContent = document.getElementById("main-content");
-      mainContent.innerHTML = `
-      <div class="about-me">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-          <i class="fas fa-graduation-cap"></i> Educación
-        </h2>
-    
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-    
-          <!-- Universidad de Huelva -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
-            <img src="img/UHU.png" alt="Universidad de Huelva" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
-            <h3 style="color: #1e2a38; text-align: center;">Grado en Ingeniería Informática</h3>
-            <div style="text-align: center;">
-              <p style="color: #444;">Universidad de Huelva</p>
-              <p style="font-size: 0.95rem; color: #666;">Modalidad: Ingeniería del Software</p>
-              <p style="font-size: 0.9rem; color: #999;">Octubre 2019 - Julio 2024</p>
-            </div>
-          </div>
-    
-          <!-- Certificación APTIS -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
-            <img src="img/APTIS.png" alt="British Council" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
-            <h3 style="color: #1e2a38; text-align: center;">Certificación Oficial APTIS</h3>
-            <div style="text-align: center;">
-              <p style="color: #444;">British Council</p>
-              <p style="font-size: 0.95rem; color: #666;">Nivel B1 (MCERL)</p>
-              <p style="font-size: 0.9rem; color: #999;">Febrero 2024 - Abril 2024</p>
-            </div>
-          </div>
-    
-        </div>
-    
-        <a href="#" class="back-btn" id="back-btn-educacion" style="display: inline-block; margin-top: 40px; color: #fff; background-color: #007BFF; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver</a>
-      </div>
-    `;
-
-      // Botón "Volver" para sección Educación
-      document.getElementById("back-btn-educacion").addEventListener("click", function() {
-        window.location.reload();
-      });
-    });
-    document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
-  event.preventDefault();
-
-  var mainContent = document.getElementById("main-content");
-  mainContent.innerHTML = `
-    <div class="certificaciones">
+         document.querySelector('a[href="#educacion"]').addEventListener("click", function(event) {
+    event.preventDefault();
+    var mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+    <div class="about-me">
       <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-        <i class="fas fa-certificate"></i> Certificaciones
+        <i class="fas fa-graduation-cap"></i> Educación
       </h2>
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-
-        <!-- Certificado 1 -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
-          <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
-          <div>
-            <h3 style="color: #1e2a38;">Introducción a redes</h3>
-            <p style="color: #444;">Cisco Networking Academy</p>
-            <p style="font-size: 0.95rem; color: #666;">Año: 2021 — 150 horas</p>
+        <!-- Universidad de Huelva -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
+          <img src="img/UHU.png" alt="Universidad de Huelva" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
+          <h3 style="color: #1e2a38; text-align: center;">Grado en Ingeniería Informática</h3>
+          <div style="text-align: center;">
+            <p style="color: #444;">Universidad de Huelva</p>
+            <p style="font-size: 0.95rem; color: #666;">Modalidad: Ingeniería del Software</p>
+            <p style="font-size: 0.9rem; color: #999;">Octubre 2019 - Julio 2024</p>
           </div>
-          <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank">
-            <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
-          </a>
         </div>
 
-        <!-- Certificado 2 -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
-          <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
-          <div>
-            <h3 style="color: #1e2a38;">Principios básicos de routing y switching</h3>
-            <p style="color: #444;">Cisco Networking Academy</p>
-            <p style="font-size: 0.95rem; color: #666;">Año: 2022 — 150 horas</p>
+        <!-- Certificación APTIS -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
+          <img src="img/APTIS.png" alt="British Council" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
+          <h3 style="color: #1e2a38; text-align: center;">Certificación Oficial APTIS</h3>
+          <div style="text-align: center;">
+            <p style="color: #444;">British Council</p>
+            <p style="font-size: 0.95rem; color: #666;">Nivel B1 (MCERL)</p>
+            <p style="font-size: 0.9rem; color: #999;">Febrero 2024 - Abril 2024</p>
           </div>
-          <a href="info/ÁlvaroDomínguez Mora-CCNA2_RS202122-certificate.pdf" target="_blank">
-            <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
-          </a>
         </div>
-
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#" class="back-btn" id="back-btn-certificaciones" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-      </div>
+      <a href="#" class="back-btn" id="back-btn-educacion" style="display: inline-block; margin-top: 40px; color: #fff; background-color: #007BFF; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver</a>
     </div>
-  `;
+    `;
 
-  // Botón "Volver"
-  document.getElementById("back-btn-certificaciones").addEventListener("click", function() {
-    window.location.reload();
+    // Botón "Volver" para sección Educación
+    document.getElementById("back-btn-educacion").addEventListener("click", function() {
+      window.location.reload();
+    });
   });
-});
-<div class="experiencia">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-    <i class="fas fa-briefcase"></i> Experiencia
-  </h2>
 
-   <div style="background: #fff; border-radius: 12px; padding: 25px; max-width: 700px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 1.05rem; color: #444; line-height: 1.6;">
-  Aún no he tenido la oportunidad de trabajar en el sector tecnológico, aunque durante mi grado he tenido la experiencia de desempeñar otros trabajos en paralelo.  
-  <br><br>
-  Aunque es cierto que los recién graduados a menudo se enfrentan a dificultades para acceder a su primera oportunidad profesional, estoy convencido de que mi momento llegará.  
-  <br><br>
-  A veces puede resultar algo frustrante, pero estoy seguro de que las oportunidades aparecerán. He invertido años de esfuerzo y dedicación para formarme, y aunque aún no he tenido la oportunidad de demostrar todo lo que sé, estoy emocionado de que mi momento está por llegar. ¡Cuando llegue, estaré más que listo para afrontar el desafío con toda mi energía y determinación!  
-  <br><br>
-  Mi motivación es alta, tengo muchas ganas de aprender, crecer y afrontar este primer desafío profesional. Estoy preparado para poner en práctica lo aprendido y aportar todo lo que sé y lo que soy capaz de hacer.
-  
-  <br><br>
-  <!-- Imagen motivacional -->
-  <div style="text-align: center; margin-top: 20px;">
-    <img src="img/motivacion.jpg" alt="Motivación" style="max-width: 100%; height: auto; border-radius: 10px;">
-  </div>
-</div>
+  // JavaScript para manejar el clic en "Certificaciones"
+  document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
+    event.preventDefault();
 
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="#" class="back-btn" id="back-btn-experiencia" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-  </div>
-</div>
-  </script>
+    var mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+      <div class="certificaciones">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+          <i class="fas fa-certificate"></i> Certificaciones
+        </h2>
 
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+
+          <!-- Certificado 1 -->
+          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
+            <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
+            <div>
+              <h3 style="color: #1e2a38;">Introducción a redes</h3>
+              <p style="color: #444;">Cisco Networking Academy</p>
+              <p style="font-size: 0.95rem; color: #666;">Año: 2021 — 150 horas</p>
+            </div>
+            <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank">
+              <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
+            </a>
+          </div>
+
+          <!-- Certificado 2 -->
+          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
+            <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
+            <div>
+              <h3 style="color: #1e2a38;">Principios básicos de routing y switching</h3>
+              <p style="color: #444;">Cisco Networking Academy</p>
+              <p style="font-size: 0.95rem; color: #666;">Año: 2022 — 150 horas</p>
+            </div>
+            <a href="info/ÁlvaroDomínguez Mora-CCNA2_RS202122-certificate.pdf" target="_blank">
+              <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
+            </a>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="back-btn" id="back-btn-certificaciones" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+        </div>
+      </div>
+    `;
+
+    // Botón "Volver"
+    document.getElementById("back-btn-certificaciones").addEventListener("click", function() {
+      window.location.reload();
+    });
+  });
+
+  // JavaScript para manejar el clic en "Experiencia"
+  document.querySelector('a[href="#experiencia"]').addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+      <div class="experiencia">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+          <i class="fas fa-briefcase"></i> Experiencia
+        </h2>
+
+        <div style="background: #fff; border-radius: 12px; padding: 25px; max-width: 700px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 1.05rem; color: #444; line-height: 1.6;">
+          Aún no he tenido la oportunidad de trabajar en el sector tecnológico, aunque durante mi grado he tenido la experiencia de desempeñar otros trabajos en paralelo.  
+          <br><br>
+          Aunque es cierto que los recién graduados a menudo se enfrentan a dificultades para acceder a su primera oportunidad profesional, estoy convencido de que mi momento llegará.  
+          <br><br>
+          A veces puede resultar algo frustrante, pero estoy seguro de que las oportunidades aparecerán. He invertido años de esfuerzo y dedicación para formarme, y aunque aún no he tenido la oportunidad de demostrar todo lo que sé, estoy emocionado de que mi momento está por llegar. ¡Cuando llegue, estaré más que listo para afrontar el desafío con toda mi energía y determinación!  
+          <br><br>
+          Mi motivación es alta, tengo muchas ganas de aprender, crecer y afrontar este primer desafío profesional. Estoy preparado para poner en práctica lo aprendido y aportar todo lo que sé y lo que soy capaz de hacer.
+        </div>
+
+        <!-- Imagen motivacional -->
+        <div style="text-align: center; margin-top: 20px;">
+          <img src="img/motivacion.jpg" alt="Motivación" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="#" class="back-btn" id="back-btn-experiencia" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+        </div>
+      </div>
+    `;
+
+    // Botón "Volver"
+    document.getElementById("back-btn-experiencia").addEventListener("click", function() {
+      window.location.reload();
+    });
+  });
+</script>
 </body>
 </html>
