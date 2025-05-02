@@ -236,53 +236,57 @@
         window.location.reload();
       });
     });
-     document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
-    event.preventDefault();
+    document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
+  event.preventDefault();
 
-    var mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = `
-      <div class="certificaciones">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-          <i class="fas fa-certificate"></i> Certificaciones
-        </h2>
+  var mainContent = document.getElementById("main-content");
+  mainContent.innerHTML = `
+    <div class="certificaciones">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+        <i class="fas fa-certificate"></i> Certificaciones
+      </h2>
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
 
-          <!-- Certificado 1 -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
-            <img src="img/cisco.jpg" alt="Cisco Networking Academy" style="width: 100px; margin-bottom: 15px;">
+        <!-- Certificado 1 -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
+          <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
+          <div>
             <h3 style="color: #1e2a38;">Introducción a redes</h3>
             <p style="color: #444;">Cisco Networking Academy</p>
             <p style="font-size: 0.95rem; color: #666;">Año: 2021 — 150 horas</p>
-            <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank">
-              <img src="img/ver.png" alt="Ver certificado" style="width: 32px; margin-top: 10px;">
-            </a>
           </div>
+          <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank">
+            <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
+          </a>
+        </div>
 
-          <!-- Certificado 2 -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
-            <img src="img/cisco.jpg" alt="Cisco Networking Academy" style="width: 100px; margin-bottom: 15px;">
+        <!-- Certificado 2 -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
+          <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
+          <div>
             <h3 style="color: #1e2a38;">Principios básicos de routing y switching</h3>
             <p style="color: #444;">Cisco Networking Academy</p>
             <p style="font-size: 0.95rem; color: #666;">Año: 2022 — 150 horas</p>
-            <a href="info/ÁlvaroDomínguez Mora-CCNA2_RS202122-certificate.pdf" target="_blank">
-              <img src="img/ver.png" alt="Ver certificado" style="width: 32px; margin-top: 10px;">
-            </a>
           </div>
-
+          <a href="info/ÁlvaroDomínguez Mora-CCNA2_RS202122-certificate.pdf" target="_blank">
+            <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
+          </a>
         </div>
 
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="back-btn" id="back-btn-certificaciones" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-        </div>
       </div>
-    `;
 
-    // Botón "Volver"
-    document.getElementById("back-btn-certificaciones").addEventListener("click", function() {
-      window.location.reload();
-    });
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#" class="back-btn" id="back-btn-certificaciones" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+      </div>
+    </div>
+  `;
+
+  // Botón "Volver"
+  document.getElementById("back-btn-certificaciones").addEventListener("click", function() {
+    window.location.reload();
   });
+});
 
   </script>
  
