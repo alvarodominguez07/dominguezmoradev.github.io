@@ -106,6 +106,23 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #0066cc;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #004a99;
     }
   </style>
 </head>
@@ -116,7 +133,7 @@
     <p>Desarrollador Full Stack | Ingeniería Informática | Soluciones Digitales</p>
   </header>
 
-  <div class="container">
+  <div class="container" id="main-content">
     <img src="info/orla.jpg" alt="Foto de perfil" class="profile-photo">
 
     <div class="intro">
@@ -144,22 +161,18 @@
     <a href="info/CV.pdf" class="download-btn" download>
       <i class="fas fa-file-download"></i> Descargar CV
     </a>
-
-    <!-- Contenedor para mostrar el mensaje de "Sobre mí" -->
-    <div id="about-me-content">
-      <!-- El contenido sobre ti se mostrará aquí cuando el usuario haga clic en "Sobre mí" -->
-    </div>
   </div>
 
   <script>
     // JavaScript para manejar el clic en "Sobre mí"
     document.getElementById("about-me-link").addEventListener("click", function() {
-      // Limpiar el contenido actual de "Sobre mí"
-      document.getElementById("about-me-content").innerHTML = "";
-
-      // Crear el mensaje interactivo
-      var aboutMeContent = `
+      // Limpiar el contenido actual y mostrar el mensaje "Sobre mí"
+      var mainContent = document.getElementById("main-content");
+      mainContent.innerHTML = `
         <div class="about-me">
+          <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+            ¡Bienvenido a mi portafolio profesional!
+          </h2>
           <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 1.5rem;">
             Mi nombre es Álvaro Domínguez Mora, y desde temprana edad he cultivado una profunda pasión por el mundo de la informática. La innovación, la exploración y la búsqueda constante de soluciones son elementos que siempre me han acompañado a lo largo de mi vida. A los 18 años, comencé mi trayectoria académica en el grado de Ingeniería Informática en la Universidad de Huelva, un período en el que adquirí una sólida formación en diversas áreas de la programación, abarcando desde el desarrollo de aplicaciones hasta la creación de soluciones personalizadas para una variedad de industrias.
           </p>
@@ -169,11 +182,14 @@
           <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 1.5rem;">
             Mi especialización radica en la creación de software que no solo resuelve problemas, sino que también mejora la experiencia del usuario, optimiza procesos y genera valor para las empresas. Mi enfoque se centra en la programación, el diseño de sistemas y la integración de nuevas tecnologías, con el fin de desarrollar productos que se adapten a las necesidades específicas de cada cliente. Estoy en la búsqueda constante de proyectos que me desafíen y me permitan ofrecer soluciones creativas y efectivas.
           </p>
+          <a href="#" class="back-btn" id="back-btn">Volver al inicio</a>
         </div>
       `;
-      
-      // Insertar el nuevo contenido en el contenedor
-      document.getElementById("about-me-content").innerHTML = aboutMeContent;
+
+      // Agregar el comportamiento del botón "Volver"
+      document.getElementById("back-btn").addEventListener("click", function() {
+        window.location.reload(); // Esto recarga la página y vuelve al contenido inicial
+      });
     });
   </script>
 </body>
