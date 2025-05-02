@@ -336,7 +336,65 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
       window.location.reload();
     });
   });
+    document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
+  event.preventDefault();
 
+  var mainContent = document.getElementById("main-content");
+  mainContent.innerHTML = `
+    <div class="habilidades" style="font-family: 'Arial', sans-serif; color: #333;">
+      <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; color: #007bff; font-weight: bold;">
+        <i class="fas fa-cogs"></i> Habilidades
+      </h2>
+
+      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 900px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+        
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 0.8rem; font-weight: 600;">
+          Lenguajes de Programación y Frameworks
+        </h3>
+        <p><strong>Lenguajes:</strong> C++, C, Kotlin, Java, JavaScript, Python, HTML, CSS</p>
+        <p><strong>Frameworks:</strong> Spring Boot, Django</p>
+
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
+          Bases de Datos
+        </h3>
+        <p>MySQL, MariaDB, MongoDB, Firebase</p>
+
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
+          Herramientas, Plataformas y Metodologías
+        </h3>
+        <p><strong>Herramientas y Plataformas:</strong> Git, GitHub, Docker, Google Cloud, Azure</p>
+        <p><strong>Metodologías:</strong> Arquitectura Hexagonal, Modelo-Vista-Controlador (MVC), Scrum</p>
+
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
+          IDEs
+        </h3>
+        <p>Eclipse, Apache NetBeans, PyCharm</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#" class="back-btn" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #007bff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
+          Volver
+        </a>
+      </div>
+    </div>
+  `;
+
+  // Efecto de hover en el botón "Volver"
+  document.getElementById("back-btn-habilidades").addEventListener("mouseover", function() {
+    this.style.backgroundColor = '#0056b3';
+    this.style.transform = 'scale(1.1)';
+  });
+
+  document.getElementById("back-btn-habilidades").addEventListener("mouseout", function() {
+    this.style.backgroundColor = '#007bff';
+    this.style.transform = 'scale(1)';
+  });
+
+  // Botón "Volver"
+  document.getElementById("back-btn-habilidades").addEventListener("click", function() {
+    window.location.reload();
+  });
+});
 </script>
 </body>
 </html>
