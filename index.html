@@ -95,6 +95,41 @@
     .download-btn:hover {
       background-color: #004a99;
     }
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Agregar un fondo diferente para cada categoría */
+#lenguajes {
+    background-color: #e7f7ff;
+    border-left: 5px solid #007bff;
+}
+
+#bases-datos {
+    background-color: #eaf0e1;
+    border-left: 5px solid #28a745;
+}
+
+#herramientas {
+    background-color: #f9f0e1;
+    border-left: 5px solid #ff9500;
+}
+
+#ides {
+    background-color: #f1e4f3;
+    border-left: 5px solid #c71585;
+}
+
+#lenguajes, #bases-datos, #herramientas, #ides {
+    animation: fadeIn 0.6s ease-out;
+}
 
     /* Agregamos el estilo para el mensaje de "Sobre mí" */
     .about-me {
