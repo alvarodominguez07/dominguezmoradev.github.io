@@ -73,6 +73,25 @@
       font-weight: 500;
       width: 180px;
     }
+    .logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill-category .logos img,
+.category .logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.skill-category .logos img:hover,
+.category .logos img:hover {
+  transform: scale(1.1);
+}
 
     .menu-card:hover {
       transform: translateY(-4px);
@@ -374,121 +393,83 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
   event.preventDefault();
 
-  var mainContent = document.getElementById("main-content");
+  const mainContent = document.getElementById("main-content");
   mainContent.innerHTML = `
     <div class="habilidades" style="font-family: 'Arial', sans-serif; color: #333;">
       <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; color: #007bff; font-weight: bold;">
-        <i class="fas fa-cogs"></i> Habilidades
+        <i class="fas fa-cogs"></i> Habilidades Técnicas
       </h2>
 
-      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 900px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8; text-align: justify;">
+      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 1000px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8;">
         
-        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 0.8rem; font-weight: 600;">
-          Lenguajes de Programación y Frameworks
-        </h3>
-        <p><strong>Lenguajes:</strong> C++, C, Kotlin, Java, JavaScript, Python, HTML, CSS</p>
-        <p><strong>Frameworks:</strong> Spring Boot, Django</p>
+        <!-- Lenguajes -->
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 1rem;">Lenguajes de Programación</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
+          ${['c++', 'c', 'kotlin', 'java', 'javascript', 'python', 'HTML', 'CSS'].map(lang => `
+            <img src="img/${lang}.png" alt="${lang}" style="width: 60px; height: auto; object-fit: contain;">
+          `).join('')}
+        </div>
 
-        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
-          Bases de Datos
-        </h3>
-        <p>MySQL, MariaDB, MongoDB, Firebase</p>
+        <!-- Frameworks -->
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 1rem;">Frameworks</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
+          <img src="img/django.jpg" alt="Django" style="width: 60px; height: auto;">
+          <img src="img/springboot.png" alt="Spring Boot" style="width: 60px; height: auto;">
+        </div>
 
-        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
-          Herramientas, Plataformas y Metodologías
-        </h3>
-        <p><strong>Herramientas y Plataformas:</strong> Git, GitHub, Docker, Google Cloud, Azure</p>
-        <p><strong>Metodologías:</strong> Arquitectura Hexagonal, Modelo-Vista-Controlador (MVC), Scrum</p>
+        <!-- Bases de Datos -->
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 1rem;">Bases de Datos</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
+          <img src="img/mysql.png" alt="MySQL" style="width: 60px;">
+          <img src="img/MariaDB.png" alt="MariaDB" style="width: 60px;">
+          <img src="img/mongodb.png" alt="MongoDB" style="width: 60px;">
+          <img src="img/firebase.png" alt="Firebase" style="width: 60px;">
+        </div>
 
-        <h3 style="color: #007bff; font-size: 1.6rem; margin-top: 1.5rem; font-weight: 600;">
-          IDEs
-        </h3>
-        <p>Eclipse, Apache NetBeans, PyCharm</p>
+        <!-- Herramientas -->
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 1rem;">Herramientas, Plataformas y Metodologías</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 20px;">
+          <img src="img/git.png" alt="Git" style="width: 60px;">
+          <img src="img/github.png" alt="GitHub" style="width: 60px;">
+          <img src="img/docker.png" alt="Docker" style="width: 60px;">
+          <img src="img/googlecloud.jpg" alt="Google Cloud" style="width: 60px;">
+          <img src="img/microsoftazure.png" alt="Azure" style="width: 60px;">
+          <img src="img/apache.png" alt="Apache" style="width: 60px;">
+        </div>
+        <p style="text-align: center;">Arquitectura Hexagonal, MVC, Scrum</p>
+
+        <!-- IDEs -->
+        <h3 style="color: #007bff; font-size: 1.6rem; margin-bottom: 1rem;">IDEs</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+          <img src="img/pycharm.png" alt="PyCharm" style="width: 60px;">
+          <img src="img/eclipse.png" alt="Eclipse" style="width: 60px;">
+        </div>
       </div>
 
+      <!-- Botón Volver -->
       <div style="text-align: center; margin-top: 40px;">
-        <a href="#" class="back-btn" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #007bff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
+        <a href="#" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #007bff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
           Volver
         </a>
       </div>
     </div>
   `;
 
-  // Efecto de hover en el botón "Volver"
-  document.getElementById("back-btn-habilidades").addEventListener("mouseover", function() {
+  // Efectos botón
+  const backBtn = document.getElementById("back-btn-habilidades");
+  backBtn.addEventListener("mouseover", function () {
     this.style.backgroundColor = '#0056b3';
     this.style.transform = 'scale(1.1)';
   });
-
-  document.getElementById("back-btn-habilidades").addEventListener("mouseout", function() {
+  backBtn.addEventListener("mouseout", function () {
     this.style.backgroundColor = '#007bff';
     this.style.transform = 'scale(1)';
   });
-
-  // Botón "Volver"
-  document.getElementById("back-btn-habilidades").addEventListener("click", function() {
+  backBtn.addEventListener("click", function () {
     window.location.reload();
   });
 });
-     document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
-    event.preventDefault(); // Evita el scroll automático
-    var mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = `
-      <div id="habilidades-section">
-        <h2>Habilidades Técnicas</h2>
-        <div id="lenguajes" class="skill-category">
-          <h2>Lenguajes de Programación</h2>
-            <div class="logos">
-                <div class="logo"><img src="img/c++.png" alt="C++"></div>
-                <div class="logo"><img src="img/c.png" alt="C"></div>
-                <div class="logo"><img src="img/kotlin.png" alt="Kotlin"></div>
-                <div class="logo"><img src="img/java.png" alt="Java"></div>
-                <div class="logo"><img src="img/javascript.png" alt="JavaScript"></div>
-                <div class="logo"><img src="img/python.png" alt="Python"></div>
-                <div class="logo"><img src="img/HTML.png" alt="HTML"></div>
-                <div class="logo"><img src="img/CSS.png" alt="CSS"></div>
-                <div class="logo"><img src="img/django.jpg" alt="Django"></div>
-            </div>
-        </div>
 
-        <!-- Bases de Datos -->
-        <div class="category" id="bases-datos">
-            <h2>Bases de Datos</h2>
-            <div class="logos">
-                <div class="logo"><img src="img/mysql.png" alt="MySQL"></div>
-                <div class="logo"><img src="img/MariaDB.png" alt="MariaDB"></div>
-                <div class="logo"><img src="img/mongodb.png" alt="MongoDB"></div>
-                <div class="logo"><img src="img/firebase.png" alt="Firebase"></div>
-            </div>
-        </div>
-
-        <!-- Herramientas, Plataformas y Metodologías -->
-        <div class="category" id="herramientas">
-            <h2>Herramientas, Plataformas y Metodologías</h2>
-            <div class="logos">
-                <div class="logo"><img src="img/git.png" alt="Git"></div>
-                <div class="logo"><img src="img/github.png" alt="GitHub"></div>
-                <div class="logo"><img src="img/docker.png" alt="Docker"></div>
-                <div class="logo"><img src="img/googlecloud.jpg" alt="Google Cloud"></div>
-                <div class="logo"><img src="img/microsoftazure.png" alt="Microsoft Azure"></div>
-                <div class="logo"><img src="img/apache.png" alt="Apache"></div>
-            </div>
-            <div class="text-category">
-                <p>Arquitectura Hexagonal, Modelo-Vista-Controlador (MVC), Scrum</p>
-            </div>
-        </div>
-
-        <!-- IDEs -->
-        <div class="category" id="ides">
-            <h2>IDEs y Herramientas</h2>
-            <div class="logos">
-                <div class="logo"><img src="img/pycharm.png" alt="PyCharm"></div>
-                <div class="logo"><img src="img/eclipse.png" alt="Eclipse"></div>
-            </div>
-        </div>
-    `;
-    document.getElementById("back-btn").addEventListener("click", () => location.reload());
-  });
 </script>
 </body>
 </html>
