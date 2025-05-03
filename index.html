@@ -391,20 +391,20 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
       window.location.reload();
     });
   });
-   document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
+  document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
   event.preventDefault();
 
   const mainContent = document.getElementById("main-content");
   mainContent.innerHTML = `
-    <div class="habilidades" style="font-family: 'Poppins', sans-serif; color: #333;">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #6c63ff; font-weight: 700; letter-spacing: 1px;">
+    <div class="habilidades" style="font-family: 'Poppins', sans-serif; color: #000;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #000; font-weight: 700; letter-spacing: 1px;">
         <i class="fas fa-cogs"></i> Habilidades
       </h2>
 
-      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 1000px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8;">
+      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 1000px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8; color: #000;">
         
         <!-- Lenguajes -->
-        <h3 style="color: #6c63ff; font-size: 1.5rem; margin-bottom: 1rem;">Lenguajes de Programación</h3>
+        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Lenguajes de Programación</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
           ${['c++', 'c', 'kotlin', 'java', 'javascript', 'python', 'HTML', 'CSS'].map(lang => `
             <img src="img/${lang}.png" alt="${lang}" style="width: 60px; height: auto; object-fit: contain;">
@@ -412,14 +412,14 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
         </div>
 
         <!-- Frameworks -->
-        <h3 style="color: #6c63ff; font-size: 1.5rem; margin-bottom: 1rem;">Frameworks</h3>
+        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Frameworks</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
           <img src="img/django.png" alt="Django" style="width: 60px; height: auto;">
           <img src="img/spring.png" alt="Spring Boot" style="width: 60px; height: auto;">
         </div>
 
         <!-- Bases de Datos -->
-        <h3 style="color: #6c63ff; font-size: 1.5rem; margin-bottom: 1rem;">Bases de Datos</h3>
+        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Bases de Datos</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
           <img src="img/mysql.png" alt="MySQL" style="width: 60px;">
           <img src="img/MariaDB.png" alt="MariaDB" style="width: 60px;">
@@ -428,7 +428,7 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
         </div>
 
         <!-- Herramientas -->
-        <h3 style="color: #6c63ff; font-size: 1.5rem; margin-bottom: 1rem;">Herramientas, Plataformas y Metodologías</h3>
+        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Herramientas, Plataformas y Metodologías</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 20px;">
           <img src="img/git.png" alt="Git" style="width: 60px;">
           <img src="img/GitHub.png" alt="GitHub" style="width: 60px;">
@@ -437,10 +437,10 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
           <img src="img/MicrosoftAzure.png" alt="Azure" style="width: 60px;">
           <img src="img/apache.png" alt="Apache" style="width: 60px;">
         </div>
-        <p style="text-align: center;">Arquitectura Hexagonal, MVC, Scrum</p>
+        <p style="text-align: center; color: #000;">Arquitectura Hexagonal, MVC, Scrum</p>
 
         <!-- IDEs -->
-        <h3 style="color: #6c63ff; font-size: 1.5rem; margin-bottom: 1rem;">IDEs</h3>
+        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">IDEs</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
           <img src="img/pycharm.png" alt="PyCharm" style="width: 60px;">
           <img src="img/eclipse.png" alt="Eclipse" style="width: 60px;">
@@ -449,7 +449,7 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
 
       <!-- Botón Volver -->
       <div style="text-align: center; margin-top: 40px;">
-        <a href="#" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #6c63ff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
+        <a href="#" id="back-btn-habilidades" style="text-decoration: none; color: #000; background: #6c63ff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
           Volver
         </a>
       </div>
@@ -469,8 +469,6 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     window.location.reload();
   });
 });
-
-
 </script>
 </body>
 </html>
