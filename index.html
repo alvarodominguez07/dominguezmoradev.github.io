@@ -447,25 +447,14 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
         </div>
       </div>
 
-      <!-- Botón Volver -->
+      <!-- Botón Volver (estilo igual al de experiencia) -->
       <div style="text-align: center; margin-top: 40px;">
-        <a href="#" id="back-btn-habilidades" style="text-decoration: none; color: #000; background: #6c63ff; padding: 12px 30px; border-radius: 30px; font-weight: bold; text-transform: uppercase; font-size: 1rem; transition: all 0.3s ease;">
-          Volver
-        </a>
+        <a href="#" class="back-btn" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
       </div>
     </div>
   `;
 
-  const backBtn = document.getElementById("back-btn-habilidades");
-  backBtn.addEventListener("mouseover", function () {
-    this.style.backgroundColor = '#4a43b5';
-    this.style.transform = 'scale(1.1)';
-  });
-  backBtn.addEventListener("mouseout", function () {
-    this.style.backgroundColor = '#6c63ff';
-    this.style.transform = 'scale(1)';
-  });
-  backBtn.addEventListener("click", function () {
+  document.getElementById("back-btn-habilidades").addEventListener("click", function () {
     window.location.reload();
   });
 });
