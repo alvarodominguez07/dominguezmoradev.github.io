@@ -430,6 +430,42 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     window.location.reload();
   });
 });
+     document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
+    event.preventDefault(); // Evita el scroll automático
+    var mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = `
+      <div id="habilidades-section">
+        <h2>Habilidades Técnicas</h2>
+        <div id="lenguajes" class="skill-category">
+          <h3>Lenguajes de Programación</h3>
+          <img src="logos/html5.png" alt="HTML5" width="60">
+          <img src="logos/css3.png" alt="CSS3" width="60">
+          <img src="logos/javascript.png" alt="JavaScript" width="60">
+          <img src="logos/python.png" alt="Python" width="60">
+          <img src="logos/java.png" alt="Java" width="60">
+        </div>
+        <div id="bases-datos" class="skill-category">
+          <h3>Bases de Datos</h3>
+          <img src="logos/mysql.png" alt="MySQL" width="60">
+          <img src="logos/postgresql.png" alt="PostgreSQL" width="60">
+        </div>
+        <div id="herramientas" class="skill-category">
+          <h3>Herramientas y Frameworks</h3>
+          <img src="logos/django.png" alt="Django" width="60">
+          <img src="logos/react.png" alt="React" width="60">
+          <img src="logos/git.png" alt="Git" width="60">
+        </div>
+        <div id="ides" class="skill-category">
+          <h3>Entornos de Desarrollo</h3>
+          <img src="logos/vscode.png" alt="VS Code" width="60">
+          <img src="logos/pycharm.png" alt="PyCharm" width="60">
+          <img src="logos/androidstudio.png" alt="Android Studio" width="60">
+        </div>
+        <a href="#" class="back-btn" id="back-btn">Volver</a>
+      </div>
+    `;
+    document.getElementById("back-btn").addEventListener("click", () => location.reload());
+  });
 </script>
 </body>
 </html>
