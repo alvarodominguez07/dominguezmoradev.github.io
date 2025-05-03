@@ -18,8 +18,9 @@
                 <div class="logo"><img src="img/java.png" alt="Java"></div>
                 <div class="logo"><img src="img/javascript.png" alt="JavaScript"></div>
                 <div class="logo"><img src="img/python.png" alt="Python"></div>
-                <div class="logo"><img src="img/html.png" alt="HTML"></div>
-                <div class="logo"><img src="img/css.png" alt="CSS"></div>
+                <div class="logo"><img src="img/HTML.png" alt="HTML"></div>
+                <div class="logo"><img src="img/CSS.png" alt="CSS"></div>
+                <div class="logo"><img src="img/django.jpg" alt="CSS"></div>
             </div>
         </div>
 
@@ -28,7 +29,7 @@
             <h2>Bases de Datos</h2>
             <div class="logos">
                 <div class="logo"><img src="img/mysql.png" alt="MySQL"></div>
-                <div class="logo"><img src="img/mariadb.png" alt="MariaDB"></div>
+                <div class="logo"><img src="img/MariaDB.png" alt="MariaDB"></div>
                 <div class="logo"><img src="img/mongodb.png" alt="MongoDB"></div>
                 <div class="logo"><img src="img/firebase.png" alt="Firebase"></div>
             </div>
