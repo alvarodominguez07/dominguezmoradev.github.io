@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,6 +56,58 @@
       line-height: 1.8;
       margin-bottom: 30px;
     }
+      #contact-info {
+  font-family: 'Arial', sans-serif;
+  padding: 30px;
+}
+
+#contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+#contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact-info a:hover {
+  text-decoration: underline;
+}
+
+#contact-info .fas {
+  margin-right: 8px;
+}
+
+#contact-info .fab {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+#contact-info .fab:hover {
+  color: #0056b3;
+}
+
+#contact-info .fas, .fab {
+  font-size: 1.5rem;
+}
+
+#contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#contact-info a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 50px;
+}
 
     .menu {
       display: flex;
@@ -555,6 +608,37 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
   };
 
 });
-</script>
+  <!-- Botón de Contacto -->
+<a href="#contacto" id="contacto-btn" style="text-decoration: none; color: #007bff; font-weight: bold;">Contacto</a>
+
+<!-- Sección de Contacto -->
+<div id="contact-info" style="text-align: center; margin-top: 50px; color: #333;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem; font-weight: bold;">
+    <i class="fas fa-phone"></i> Contacto
+  </h2>
+
+  <div style="font-size: 1.2rem; margin-bottom: 15px;">
+    <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+34653492650" style="color: #007bff;">653492650</a></p>
+    <p><i class="fas fa-envelope"></i> Correo: <a href="mailto:alvarodm76@gmail.com" style="color: #007bff;">alvarodm76@gmail.com</a></p>
+  </div>
+
+  <!-- LinkedIn -->
+  <div style="margin-top: 20px;">
+    <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" style="text-decoration: none; color: #007bff;">
+      <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Botón Volver -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="#" id="back-btn-contacto" class="back-btn" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+  </div>
+</div>
+
+<!-- Pie de página (Copyright) -->
+<div style="text-align: center; margin-top: 50px; font-size: 1rem; color: #777;">
+  <p>&copy; 2025 Álvaro Domínguez. Todos los derechos reservados.</p>
+</div>
 </body>
 </html>
