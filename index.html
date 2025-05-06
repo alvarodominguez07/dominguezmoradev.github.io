@@ -6,6 +6,7 @@
   <title>Álvaro Domínguez Mora - Desarrollador Full Stack</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -458,65 +459,85 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     window.location.reload();
   });
 });
-    // JavaScript para manejar el clic en "Proyectos"
+ // JavaScript para manejar el clic en "Proyectos"
 document.querySelector('a[href="#proyectos"]').addEventListener("click", function(event) {
   event.preventDefault();
 
-  var mainContent = document.getElementById("main-content");
+  const mainContent = document.getElementById("main-content");
   mainContent.innerHTML = `
-    <div class="proyectos">
-      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-        <i class="fas fa-laptop-code"></i> Proyectos Destacados
+    <div class="proyectos" style="animation: fadeIn 0.6s ease-out;">
+      <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #1e2a38; font-weight: bold; text-align: center;">
+        <i class="fas fa-laptop-code" style="color: #007bff;"></i> Mis Proyectos
       </h2>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+      <p style="text-align: center; color: #555; margin-bottom: 40px; font-size: 1rem;">
+        Aquí puedes ver algunos de los proyectos que he desarrollado a lo largo de mi formación.
+      </p>
 
-        <!-- Proyecto 1: Aplicación Móvil Rutas Turísticas -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
-          <h3 style="color: #1e2a38;">Aplicación Móvil – Rutas Turísticas</h3>
-          <p style="color: #444; font-size: 0.95rem;">
-            Aplicación desarrollada en Kotlin (Android) con backend en Django REST Framework, desplegada en Google Cloud. Incluye autenticación basada en roles, gestión de rutas y puntos de interés con Google Maps.
-          </p>
-          <p style="font-size: 0.85rem; color: #666;">Nov. 2024 – Feb. 2025 · Universidad de Huelva</p>
-          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Kotlin · Django · Google Cloud · API REST · Autenticación · MySQL · Docker</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+        <!-- Proyecto 1 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-map-marked-alt" style="font-size: 28px; color: #007bff;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">App Móvil – Rutas Turísticas</h3>
+          <p style="color: #444;">Frontend en Kotlin, backend en Django REST y despliegue en Google Cloud Run. Mapa interactivo, roles, filtros y base de datos en MySQL.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Kotlin · Django · Google Cloud · Docker</p>
         </div>
 
-        <!-- Proyecto 2: Aplicación Web Gestión de Tareas -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
-          <h3 style="color: #1e2a38;">Aplicación Web – Gestión de Tareas</h3>
-          <p style="color: #444; font-size: 0.95rem;">
-            Backend en Spring Boot usando arquitectura hexagonal. Control de versiones en GitHub y metodología Scrum para planificación incremental.
-          </p>
-          <p style="font-size: 0.85rem; color: #666;">Dic. 2024 – Feb. 2025 · Universidad de Huelva</p>
-          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Spring Boot · Arquitectura hexagonal · GitHub · Scrum</p>
+        <!-- Proyecto 2 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-tasks" style="font-size: 28px; color: #28a745;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">Gestión de Tareas (Web)</h3>
+          <p style="color: #444;">Aplicación colaborativa basada en Spring Boot con arquitectura hexagonal. Seguimiento de tareas con metodología Scrum y control de versiones.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Spring Boot · GitHub · Scrum</p>
         </div>
 
-        <!-- Proyecto 3: Gestión Académica ACMEDANCE -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
-          <h3 style="color: #1e2a38;">Aplicación Web – Gestión Académica ACMEDANCE</h3>
-          <p style="color: #444; font-size: 0.95rem;">
-            Proyecto en Java + Spring con Hibernate, MVC, Maven y despliegue en Tomcat. Pruebas unitarias y control de versiones en GitHub.
-          </p>
-          <p style="font-size: 0.85rem; color: #666;">Abr. 2024 – May. 2024 · Universidad de Huelva</p>
-          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Java · Spring · MVC · Hibernate · GitHub · Tomcat</p>
+        <!-- Proyecto 3 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-university" style="font-size: 28px; color: #dc3545;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">Gestión Académica ACMEDANCE</h3>
+          <p style="color: #444;">Web app en Java Spring, con Hibernate y despliegue en Tomcat. Gestión de estudiantes, profesores y asignaturas.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Java · Hibernate · Spring MVC</p>
         </div>
 
-        <!-- Proyecto 4: Sistema de Administración de Gimnasios -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
-          <h3 style="color: #1e2a38;">Sistema de Administración de Gimnasios</h3>
-          <p style="color: #444; font-size: 0.95rem;">
-            Aplicación web Full Stack desarrollada con HTML, CSS, JavaScript y Spring Boot. Integración con Oracle MariaDB y migración a Hibernate para ORM.
-          </p>
-          <p style="font-size: 0.85rem; color: #666;">Dic. 2022 – Feb. 2023 · Universidad de Huelva</p>
-          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Full Stack · Spring Boot · Hibernate · Oracle DB · Diseño responsive</p>
+        <!-- Proyecto 4 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-dumbbell" style="font-size: 28px; color: #ffc107;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">Admin. Gimnasios (Full Stack)</h3>
+          <p style="color: #444;">Desarrollo full stack con HTML, CSS, JS y backend en Spring Boot con integración a Oracle y migración a Hibernate ORM.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: JavaScript · Spring · Oracle · Hibernate</p>
         </div>
 
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#" class="back-btn" id="back-btn-proyectos" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="#" id="back-btn-proyectos" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold; transition: background 0.3s;">Volver</a>
       </div>
     </div>
+
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      }
+
+      #back-btn-proyectos:hover {
+        background: #0056b3;
+      }
+    </style>
   `;
 
   // Botón "Volver"
@@ -524,6 +545,7 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
     window.location.reload();
   });
 });
+
 
 </script>
 </body>
