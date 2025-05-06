@@ -458,6 +458,73 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     window.location.reload();
   });
 });
+    // JavaScript para manejar el clic en "Proyectos"
+document.querySelector('a[href="#proyectos"]').addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var mainContent = document.getElementById("main-content");
+  mainContent.innerHTML = `
+    <div class="proyectos">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
+        <i class="fas fa-laptop-code"></i> Proyectos Destacados
+      </h2>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+
+        <!-- Proyecto 1: Aplicación Móvil Rutas Turísticas -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
+          <h3 style="color: #1e2a38;">Aplicación Móvil – Rutas Turísticas</h3>
+          <p style="color: #444; font-size: 0.95rem;">
+            Aplicación desarrollada en Kotlin (Android) con backend en Django REST Framework, desplegada en Google Cloud. Incluye autenticación basada en roles, gestión de rutas y puntos de interés con Google Maps.
+          </p>
+          <p style="font-size: 0.85rem; color: #666;">Nov. 2024 – Feb. 2025 · Universidad de Huelva</p>
+          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Kotlin · Django · Google Cloud · API REST · Autenticación · MySQL · Docker</p>
+        </div>
+
+        <!-- Proyecto 2: Aplicación Web Gestión de Tareas -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
+          <h3 style="color: #1e2a38;">Aplicación Web – Gestión de Tareas</h3>
+          <p style="color: #444; font-size: 0.95rem;">
+            Backend en Spring Boot usando arquitectura hexagonal. Control de versiones en GitHub y metodología Scrum para planificación incremental.
+          </p>
+          <p style="font-size: 0.85rem; color: #666;">Dic. 2024 – Feb. 2025 · Universidad de Huelva</p>
+          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Spring Boot · Arquitectura hexagonal · GitHub · Scrum</p>
+        </div>
+
+        <!-- Proyecto 3: Gestión Académica ACMEDANCE -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
+          <h3 style="color: #1e2a38;">Aplicación Web – Gestión Académica ACMEDANCE</h3>
+          <p style="color: #444; font-size: 0.95rem;">
+            Proyecto en Java + Spring con Hibernate, MVC, Maven y despliegue en Tomcat. Pruebas unitarias y control de versiones en GitHub.
+          </p>
+          <p style="font-size: 0.85rem; color: #666;">Abr. 2024 – May. 2024 · Universidad de Huelva</p>
+          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Java · Spring · MVC · Hibernate · GitHub · Tomcat</p>
+        </div>
+
+        <!-- Proyecto 4: Sistema de Administración de Gimnasios -->
+        <div style="background: white; border-radius: 12px; padding: 20px; width: 320px; height: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 12px;">
+          <h3 style="color: #1e2a38;">Sistema de Administración de Gimnasios</h3>
+          <p style="color: #444; font-size: 0.95rem;">
+            Aplicación web Full Stack desarrollada con HTML, CSS, JavaScript y Spring Boot. Integración con Oracle MariaDB y migración a Hibernate para ORM.
+          </p>
+          <p style="font-size: 0.85rem; color: #666;">Dic. 2022 – Feb. 2023 · Universidad de Huelva</p>
+          <p style="font-size: 0.8rem; color: #888;"><strong>Aptitudes:</strong> Full Stack · Spring Boot · Hibernate · Oracle DB · Diseño responsive</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#" class="back-btn" id="back-btn-proyectos" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
+      </div>
+    </div>
+  `;
+
+  // Botón "Volver"
+  document.getElementById("back-btn-proyectos").addEventListener("click", function() {
+    window.location.reload();
+  });
+});
+
 </script>
 </body>
 </html>
