@@ -608,37 +608,46 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
   };
 
 });
-  <!-- Botón de Contacto -->
-<a href="#contacto" id="contacto-btn" style="text-decoration: none; color: #007bff; font-weight: bold;">Contacto</a>
+document.querySelector('a[href="#contacto"]').addEventListener("click", function(event) {
+  event.preventDefault();
 
-<!-- Sección de Contacto -->
-<div id="contact-info" style="text-align: center; margin-top: 50px; color: #333;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; font-weight: bold;">
-    <i class="fas fa-phone"></i> Contacto
-  </h2>
+  const mainContent = document.getElementById("main-content");
+  mainContent.innerHTML = `
+    <div class="contacto" style="font-family: 'Poppins', sans-serif; color: #000;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; font-weight: 700; letter-spacing: 1px;">
+        <i class="fas fa-phone"></i> Contacto
+      </h2>
 
-  <div style="font-size: 1.2rem; margin-bottom: 15px;">
-    <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+34653492650" style="color: #007bff;">653492650</a></p>
-    <p><i class="fas fa-envelope"></i> Correo: <a href="mailto:alvarodm76@gmail.com" style="color: #007bff;">alvarodm76@gmail.com</a></p>
-  </div>
+      <p style="text-align: center; color: #555; margin-bottom: 40px; font-size: 1rem;">
+        Puedes ponerte en contacto conmigo a través de los siguientes medios:
+      </p>
 
-  <!-- LinkedIn -->
-  <div style="margin-top: 20px;">
-    <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" style="text-decoration: none; color: #007bff;">
-      <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
-    </a>
-  </div>
-</div>
+      <div style="font-size: 1.2rem; margin-bottom: 30px; text-align: center;">
+        <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+34653492650" style="color: #007bff;">653492650</a></p>
+        <p><i class="fas fa-envelope"></i> Correo: <a href="mailto:alvarodm76@gmail.com" style="color: #007bff;">alvarodm76@gmail.com</a></p>
+      </div>
 
-<!-- Botón Volver -->
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="#" id="back-btn-contacto" class="back-btn" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-  </div>
-</div>
+      <div style="text-align: center; margin-bottom: 40px;">
+        <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" style="text-decoration: none; color: #007bff;">
+          <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+        </a>
+      </div>
 
-<!-- Pie de página (Copyright) -->
-<div style="text-align: center; margin-top: 50px; font-size: 1rem; color: #777;">
-  <p>&copy; 2025 Álvaro Domínguez. Todos los derechos reservados.</p>
-</div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#" id="back-btn-contacto" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold; transition: background 0.3s;">Volver</a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; font-size: 1rem; color: #777;">
+      <p>&copy; 2025 Álvaro Domínguez. Todos los derechos reservados.</p>
+    </div>
+  `;
+
+  document.getElementById("back-btn-contacto").addEventListener("click", function () {
+    window.location.reload();
+  });
+});
+</script>
+
 </body>
 </html>
