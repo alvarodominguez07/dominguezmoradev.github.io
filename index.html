@@ -476,16 +476,39 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
 
-        <!-- Proyecto 1 -->
-        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+        <!-- Proyecto 1 con botón de video -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left; position: relative;">
           <div style="margin-bottom: 10px;">
             <i class="fas fa-map-marked-alt" style="font-size: 28px; color: #007bff;"></i>
           </div>
           <h3 style="color: #1e2a38;">App Móvil – Rutas Turísticas</h3>
           <p style="color: #444;">Frontend en Kotlin, backend en Django REST y despliegue en Google Cloud Run. Mapa interactivo, roles, filtros y base de datos en MySQL.</p>
           <p style="font-size: 0.85rem; color: #777;">Tecnologías: Kotlin · Django · Google Cloud · Docker</p>
+        
+          <button id="ver-video-btn" style="margin-top: 10px; padding: 10px 16px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-play-circle"></i> Ver Video
+          </button>
         </div>
-
+        
+        <!-- Modal del video -->
+        <div id="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center;">
+          <div style="background: white; padding: 20px; border-radius: 12px; max-width: 90%; max-height: 90%; position: relative;">
+            <button id="cerrar-modal" style="position: absolute; top: 10px; right: 10px; background: #dc3545; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; font-weight: bold; cursor: pointer;">×</button>
+            <video src="vid/FuncionamientoApp1.mp4" controls controlsList="nodownload" style="width: 100%; height: auto; border-radius: 8px;"></video>
+          </div>
+        </div>
+        
+        <script>
+          // Mostrar modal al hacer clic en "Ver Video"
+          document.getElementById("ver-video-btn").addEventListener("click", function () {
+            document.getElementById("video-modal").style.display = "flex";
+          });
+        
+          // Cerrar modal
+          document.getElementById("cerrar-modal").addEventListener("click", function () {
+            document.getElementById("video-modal").style.display = "none";
+          });
+        </script>
         <!-- Proyecto 2 -->
         <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
           <div style="margin-bottom: 10px;">
