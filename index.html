@@ -548,8 +548,12 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
   };
 
   window.cerrarVideo = function () {
+    const video = document.getElementById("videoProyecto");
+    video.pause();       // Pausa el video
+    video.currentTime = 0; // (opcional) Reinicia desde el inicio
     document.getElementById("modalVideo").style.display = "none";
   };
+
 });
 </script>
 </body>
