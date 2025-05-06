@@ -459,15 +459,14 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
     window.location.reload();
   });
 });
- // JavaScript para manejar el clic en "Proyectos"
 document.querySelector('a[href="#proyectos"]').addEventListener("click", function(event) {
   event.preventDefault();
 
   const mainContent = document.getElementById("main-content");
   mainContent.innerHTML = `
-    <div class="proyectos" style="animation: fadeIn 0.6s ease-out;">
-      <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #1e2a38; font-weight: bold; text-align: center;">
-        <i class="fas fa-laptop-code" style="color: #007bff;"></i> Mis Proyectos
+    <div class="proyectos" style="font-family: 'Poppins', sans-serif; color: #000;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #000; font-weight: 700; letter-spacing: 1px;">
+        <i class="fas fa-laptop-code"></i> Proyectos
       </h2>
 
       <p style="text-align: center; color: #555; margin-bottom: 40px; font-size: 1rem;">
@@ -476,57 +475,89 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
 
-        <!-- Proyecto 1 con botón de video -->
-        <div class="project-card" style="...">
+        <!-- Proyecto 1 -->
+        <div style="background: #f7f9fc; border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
           <div style="margin-bottom: 10px;">
             <i class="fas fa-map-marked-alt" style="font-size: 28px; color: #007bff;"></i>
           </div>
           <h3 style="color: #1e2a38;">App Móvil – Rutas Turísticas</h3>
-          <p style="color: #444;">Frontend en Kotlin, backend en Django REST y despliegue en Google Cloud Run...</p>
+          <p style="color: #444;">Frontend en Kotlin, backend en Django REST y despliegue en Google Cloud Run. Mapa interactivo, roles, filtros y base de datos en MySQL.</p>
           <p style="font-size: 0.85rem; color: #777;">Tecnologías: Kotlin · Django · Google Cloud · Docker</p>
-          <button class="ver-video-btn" style="...">
+          <button onclick="abrirVideo()" style="margin-top: 10px; padding: 10px 16px; background-color: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer;">
             <i class="fas fa-play-circle"></i> Ver Video
           </button>
         </div>
 
-        <!-- Modal del video -->
-        <div id="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center;">
-          <div style="background: white; padding: 20px; border-radius: 12px; max-width: 90%; max-height: 90%; position: relative;">
-            <button id="cerrar-modal" style="position: absolute; top: 10px; right: 10px; background: #dc3545; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; font-weight: bold; cursor: pointer;">×</button>
-            <video src="vid/FuncionamientoApp1.mp4" controls controlsList="nodownload" style="width: 100%; height: auto; border-radius: 8px;"></video>
+        
+        <!-- Proyecto 2 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-tasks" style="font-size: 28px; color: #28a745;"></i>
           </div>
+          <h3 style="color: #1e2a38;">Gestión de Tareas (Web)</h3>
+          <p style="color: #444;">Aplicación colaborativa basada en Spring Boot con arquitectura hexagonal. Seguimiento de tareas con metodología Scrum y control de versiones.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Spring Boot · GitHub · Scrum</p>
         </div>
 
-        <!-- Más proyectos aquí... -->
+        <!-- Proyecto 3 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-university" style="font-size: 28px; color: #dc3545;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">Gestión Académica ACMEDANCE</h3>
+          <p style="color: #444;">Web app en Java Spring, con Hibernate y despliegue en Tomcat. Gestión de estudiantes, profesores y asignaturas.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Java · Hibernate · Spring MVC</p>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
+          <div style="margin-bottom: 10px;">
+            <i class="fas fa-dumbbell" style="font-size: 28px; color: #ffc107;"></i>
+          </div>
+          <h3 style="color: #1e2a38;">Admin. Gimnasios (Full Stack)</h3>
+          <p style="color: #444;">Desarrollo full stack con HTML, CSS, JS y backend en Spring Boot con integración a Oracle y migración a Hibernate ORM.</p>
+          <p style="font-size: 0.85rem; color: #777;">Tecnologías: JavaScript · Spring · Oracle · Hibernate</p>
+        </div>
 
       </div>
-
       <div style="text-align: center; margin-top: 50px;">
-        <a href="#" id="back-btn-proyectos" style="...">Volver</a>
+        <a href="#" id="back-btn-proyectos" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold; transition: background 0.3s;">Volver</a>
+      </div>
+    </div>
+
+      <!-- Botón Volver -->
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="#" class="back-btn" id="back-btn-proyectos" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold;">
+          Volver
+        </a>
+      </div>
+
+      <!-- Modal de Video -->
+      <div id="modalVideo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+        <div style="position:relative; width:80%; max-width:800px;">
+          <video controls autoplay style="width:100%; border-radius: 12px;">
+            <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
+            Tu navegador no soporta este video.
+          </video>
+          <button onclick="cerrarVideo()" style="position:absolute; top:-15px; right:-15px; background:red; color:white; border:none; border-radius:50%; width:35px; height:35px; font-weight:bold; font-size:16px; cursor:pointer;">&times;</button>
+        </div>
       </div>
     </div>
   `;
 
-  // Después de insertar el contenido, añadir los listeners
-  setTimeout(() => {
-    const videoModal = document.getElementById("video-modal");
-    const cerrarModal = document.getElementById("cerrar-modal");
-    const verVideoBtn = document.querySelector(".ver-video-btn");
+  // Función para recargar
+  document.getElementById("back-btn-proyectos").addEventListener("click", function () {
+    window.location.reload();
+  });
 
-    verVideoBtn?.addEventListener("click", () => {
-      videoModal.style.display = "flex";
-    });
+  // Funciones para abrir/cerrar video
+  window.abrirVideo = function () {
+    document.getElementById("modalVideo").style.display = "flex";
+  };
 
-    cerrarModal?.addEventListener("click", () => {
-      videoModal.style.display = "none";
-      videoModal.querySelector("video").pause();
-    });
-
-    document.getElementById("back-btn-proyectos").addEventListener("click", function(e) {
-      e.preventDefault();
-      window.location.reload();
-    });
-  }, 50); // Pequeño delay para asegurar que el DOM esté listo
+  window.cerrarVideo = function () {
+    document.getElementById("modalVideo").style.display = "none";
+  };
 });
 </script>
 </body>
