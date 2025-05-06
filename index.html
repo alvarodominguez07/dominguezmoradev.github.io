@@ -532,17 +532,17 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
         </a>
       </div>
 
-      <!-- Modal de Video -->
-      <div id="modalVideo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
-        <div style="position:relative; width:80%; max-width:800px;">
-          <video controls autoplay style="width:100%; border-radius: 12px;">
-            <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
-            Tu navegador no soporta este video.
-          </video>
-          <button onclick="cerrarVideo()" style="position:absolute; top:-15px; right:-15px; background:red; color:white; border:none; border-radius:50%; width:35px; height:35px; font-weight:bold; font-size:16px; cursor:pointer;">&times;</button>
-        </div>
-      </div>
-    </div>
+     <!-- Modal de Video -->
+<div id="modalVideo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+  <div style="position:relative; width:80%; max-width:800px;">
+    <video id="videoProyecto" controls style="width:100%; border-radius: 12px;">
+      <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
+      Tu navegador no soporta este video.
+    </video>
+    <button onclick="cerrarVideo()" style="position:absolute; top:-15px; right:-15px; background:red; color:white; border:none; border-radius:50%; width:35px; height:35px; font-weight:bold; font-size:16px; cursor:pointer;">&times;</button>
+  </div>
+</div>
+
   `;
 
   // Función para recargar
