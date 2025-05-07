@@ -48,9 +48,7 @@
   </div>
 
   <script>
-    // JavaScript para manejar el clic en "Sobre mí"
     document.getElementById("about-me-link").addEventListener("click", function() {
-      // Limpiar el contenido actual y mostrar el mensaje "Sobre mí"
       var mainContent = document.getElementById("main-content");
       mainContent.innerHTML = `
         <div class="about-me">
@@ -67,7 +65,6 @@
         </div>
       `;
 
-      // Agregar el comportamiento del botón "Volver"
       document.getElementById("back-btn").addEventListener("click", function() {
         window.location.reload(); // Esto recarga la página y vuelve al contenido inicial
       });
@@ -109,13 +106,11 @@
     </div>
     `;
 
-    // Botón "Volver" para sección Educación
     document.getElementById("back-btn-educacion").addEventListener("click", function() {
       window.location.reload();
     });
   });
 
-  // JavaScript para manejar el clic en "Certificaciones"
   document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -198,7 +193,6 @@ document.querySelector('a[href="#experiencia"]').addEventListener("click", funct
       </div>
     `;
 
-    // Botón "Volver"
     document.getElementById("back-btn-experiencia").addEventListener("click", function() {
       window.location.reload();
     });
@@ -353,7 +347,7 @@ document.querySelector('a[href="#proyectos"]').addEventListener("click", functio
     window.location.reload();
   });
 
-  // Funciones para abrir/cerrar video
+  // abrir/cerrar video
   window.abrirVideo = function () {
     document.getElementById("modalVideo").style.display = "flex";
   };
