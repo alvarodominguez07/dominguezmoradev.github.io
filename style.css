@@ -1,6 +1,10 @@
+<!-- Enlace a Google Fonts para importar Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
+    /* Aplicamos Poppins como fuente principal */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f6f8;
@@ -17,6 +21,7 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      font-weight: 600;
     }
 
     header p {
@@ -45,54 +50,58 @@
       font-size: 1.1rem;
       line-height: 1.8;
       margin-bottom: 30px;
+      font-weight: 400;
     }
-      #contact-info {
-  font-family: 'Arial', sans-serif;
-  padding: 30px;
-}
 
-#contact-info h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-  font-weight: bold;
-}
+    #contact-info {
+      font-family: 'Poppins', sans-serif;
+      padding: 30px;
+    }
 
-#contact-info a {
-  color: #007bff;
-  text-decoration: none;
-}
+    #contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+      font-weight: 600;
+    }
 
-#contact-info a:hover {
-  text-decoration: underline;
-}
+    #contact-info a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-#contact-info .fas {
-  margin-right: 8px;
-}
+    #contact-info a:hover {
+      text-decoration: underline;
+    }
 
-#contact-info .fab {
-  color: #007bff;
-  transition: color 0.3s ease;
-}
+    #contact-info .fas {
+      margin-right: 8px;
+    }
 
-#contact-info .fab:hover {
-  color: #0056b3;
-}
+    #contact-info .fab {
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
 
-#contact-info .fas, .fab {
-  font-size: 1.5rem;
-}
+    #contact-info .fab:hover {
+      color: #0056b3;
+    }
 
-#contact-info p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-footer {
-  font-size: 1rem;
-  color: #777;
-  margin-top: 50px;
-}
+    #contact-info .fas, .fab {
+      font-size: 1.5rem;
+    }
+
+    #contact-info p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 50px;
+    }
 
     .menu {
       display: flex;
@@ -113,13 +122,14 @@ footer {
       font-weight: 500;
       width: 180px;
     }
+
     .logos {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
-    
+
     .skill-category .logos img,
     .category .logos img {
       width: 60px;
@@ -127,7 +137,7 @@ footer {
       object-fit: contain;
       transition: transform 0.2s ease;
     }
-    
+
     .skill-category .logos img:hover,
     .category .logos img:hover {
       transform: scale(1.1);
@@ -154,41 +164,42 @@ footer {
     .download-btn:hover {
       background-color: #004a99;
     }
+
     @keyframes fadeIn {
-    from {
+      from {
         opacity: 0;
         transform: translateY(30px);
-    }
-    to {
+      }
+      to {
         opacity: 1;
         transform: translateY(0);
+      }
     }
-}
 
-/* Agregar un fondo diferente para cada categoría */
-#lenguajes {
-    background-color: #e7f7ff;
-    border-left: 5px solid #007bff;
-}
+    /* Estilos para categorías */
+    #lenguajes {
+      background-color: #e7f7ff;
+      border-left: 5px solid #007bff;
+    }
 
-#bases-datos {
-    background-color: #eaf0e1;
-    border-left: 5px solid #28a745;
-}
+    #bases-datos {
+      background-color: #eaf0e1;
+      border-left: 5px solid #28a745;
+    }
 
-#herramientas {
-    background-color: #f9f0e1;
-    border-left: 5px solid #ff9500;
-}
+    #herramientas {
+      background-color: #f9f0e1;
+      border-left: 5px solid #ff9500;
+    }
 
-#ides {
-    background-color: #f1e4f3;
-    border-left: 5px solid #c71585;
-}
+    #ides {
+      background-color: #f1e4f3;
+      border-left: 5px solid #c71585;
+    }
 
-#lenguajes, #bases-datos, #herramientas, #ides {
-    animation: fadeIn 0.6s ease-out;
-}
+    #lenguajes, #bases-datos, #herramientas, #ides {
+      animation: fadeIn 0.6s ease-out;
+    }
 
     /* Agregamos el estilo para el mensaje de "Sobre mí" */
     .about-me {
@@ -202,37 +213,37 @@ footer {
       transition: all 0.3s ease;
       margin-bottom: 20px;
     }
-.motivacion-img {
-    max-width: 50%; /* Ajusta el tamaño de la imagen para que no ocupe toda la pantalla */
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave para darle elegancia */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 20px;
-}
 
-.motivacion-img:hover {
-    transform: scale(1.05); /* Efecto de escala para que sea interactiva */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más destacada al hacer hover */
-}
+    .motivacion-img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 20px;
+    }
 
-.back-btn {
-    text-decoration: none;
-    color: #fff;
-    background: #007bff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
+    .motivacion-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
 
-.back-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px); /* Efecto de elevación sutil al pasar el cursor */
-}
+    .back-btn {
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-.back-btn:active {
-    transform: translateY(0);
-}
+    .back-btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+    }
 
-  </style>
+    .back-btn:active {
+      transform: translateY(0);
+    }
+</style>
