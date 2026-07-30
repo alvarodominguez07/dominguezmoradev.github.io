@@ -3,403 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Álvaro Domínguez Mora - Desarrollador Full Stack</title>
+  <title>Álvaro Domínguez Mora | Desarrollador Full-stack</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="img/favicon.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Asegúrate de que este enlace esté presente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
-    <h1><i class="fas fa-laptop-code"></i> Álvaro Domínguez Mora</h1>
-    <p>Desarrollador Full Stack | Ingeniería Informática | Soluciones Digitales</p>
+    <div class="header-content">
+      <h1>Álvaro Domínguez Mora</h1>
+      <p>Desarrollador Full-stack / Backend | Software Engineer</p>
+    </div>
   </header>
 
-  <div class="container" id="main-content">
-    <img src="info/orla.jpg" alt="Foto de perfil" class="profile-photo">
+  <div class="container">
+    
+    <!-- SECCIÓN: INICIO (Menú principal) -->
+    <section id="inicio" class="content-section active">
+      <img src="info/orla.jpg" alt="Álvaro Domínguez" class="profile-photo">
+      
+      <div class="intro">
+        <h2>Construyendo software escalable y eficiente</h2>
+        <p>Especializado en el ecosistema Java, Python y arquitecturas Cloud. Explora mi portfolio para conocer mi experiencia y los proyectos en los que he trabajado.</p>
+      </div>
 
-    <div class="intro">
-      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333;">
-        ¡Bienvenido a mi portafolio profesional!
-      </h2>
-      <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
-        Aquí encontrarás una muestra de mis proyectos, habilidades y pasión por la tecnología y el desarrollo de soluciones innovadoras.
-      </p>
-      <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">
-        Explora y descubre cómo puedo ayudarte a hacer realidad tus ideas a través del diseño, la programación y la creatividad.
-      </p>
+      <div class="menu">
+        <button class="menu-card" onclick="showSection('sobre-mi')"><i class="fas fa-user"></i><br> Sobre mí</button>
+        <button class="menu-card" onclick="showSection('experiencia')"><i class="fas fa-briefcase"></i><br> Experiencia</button>
+        <button class="menu-card" onclick="showSection('proyectos')"><i class="fas fa-laptop-code"></i><br> Proyectos</button>
+        <button class="menu-card" onclick="showSection('habilidades')"><i class="fas fa-code"></i><br> Stack Técnico</button>
+        <button class="menu-card" onclick="showSection('educacion')"><i class="fas fa-graduation-cap"></i><br> Educación</button>
+        <button class="menu-card" onclick="showSection('certificaciones')"><i class="fas fa-certificate"></i><br> Certificaciones</button>
+        <button class="menu-card" onclick="showSection('contacto')"><i class="fas fa-envelope"></i><br> Contacto</button>
+      </div>
+
+      <a href="info/CV_Alvaro.pdf" class="download-btn" download>
+        <i class="fas fa-file-download"></i> Descargar CV
+      </a>
+    </section>
+
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi" class="content-section">
+      <div class="card-container">
+        <h2><i class="fas fa-user text-primary"></i> Sobre mí</h2>
+        <p>Hola, soy Álvaro. Soy Ingeniero Informático enfocado en el desarrollo Full-stack y Backend. Me dedico a construir servicios REST robustos, migrar sistemas legacy y desarrollar aplicaciones web y móviles.</p>
+        <p>Mi stack principal se centra en <strong>Java (Spring Boot)</strong> y <strong>Python</strong>, con experiencia en despliegues en la nube usando <strong>Google Cloud (GCP)</strong> y <strong>Azure</strong>. Me obsesiona el código limpio, la arquitectura hexagonal y la automatización de procesos para ahorrar tiempo y recursos.</p>
+        <p>Actualmente estoy cursando un Máster en Big Data y Cloud Computing para profundizar en la ingeniería de datos y el machine learning aplicado.</p>
+        <button class="back-btn" onclick="showSection('inicio')">Volver al inicio</button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: EXPERIENCIA -->
+    <section id="experiencia" class="content-section">
+      <h2><i class="fas fa-briefcase text-primary"></i> Experiencia Laboral</h2>
+      
+      <div class="job-card text-left">
+        <div class="job-header">
+          <h3>Ingeniero Software</h3>
+          <span class="job-date">Nov. 2025 – Actualidad</span>
+        </div>
+        <h4 class="company-name">Sosein</h4>
+        <ul class="job-tasks">
+          <li>Refactorización y modernización de aplicaciones legacy en Android (Java), adaptándolas a versiones actuales del SDK y reduciendo cuelgues (crashes).</li>
+          <li>Desarrollo de scripts en Python para la automatización de procesos internos, reduciendo tiempos manuales de gestión.</li>
+          <li>Integración de sistemas mediante Python y PHP como capa intermedia de intercambio de información.</li>
+          <li>Gestión, mantenimiento y consultas optimizadas sobre bases de datos MySQL.</li>
+          <li>Despliegue y configuración de plataformas en Microsoft Azure.</li>
+          <li>Soporte técnico interno y resolución de incidencias IT.</li>
+        </ul>
+        <div class="tech-tags">
+          <span>Java</span><span>Android SDK</span><span>Python</span><span>PHP</span><span>MySQL</span><span>Azure</span>
+        </div>
+      </div>
+      
+      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS -->
+    <section id="proyectos" class="content-section">
+      <h2><i class="fas fa-laptop-code text-primary"></i> Proyectos Destacados</h2>
+      <div class="grid-container">
+        
+        <div class="project-card">
+          <i class="fas fa-cubes text-primary project-icon"></i>
+          <h3>MNGPyme (Mini-ERP)</h3>
+          <p>Plataforma modular con automatización y análisis. IA integrada con OpenAI para análisis inteligente de datos y generación dinámica de PDFs.</p>
+          <div class="tech-tags">
+            <span>React</span><span>NestJS</span><span>PostgreSQL</span><span>FastAPI</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <i class="fas fa-map-marked-alt text-primary project-icon"></i>
+          <h3>App Rutas Turísticas</h3>
+          <p>Aplicación Android con arquitectura modular. Autenticación, control de roles y despliegue cloud.</p>
+          <div class="tech-tags">
+            <span>Kotlin</span><span>Django REST</span><span>Google Cloud Run</span><span>MySQL</span>
+          </div>
+          <button onclick="abrirVideo()" class="btn-sm"><i class="fas fa-play"></i> Ver Demo</button>
+        </div>
+
+        <div class="project-card">
+          <i class="fas fa-tasks text-primary project-icon"></i>
+          <h3>Gestor de Tareas</h3>
+          <p>API Backend con arquitectura hexagonal para la gestión de proyectos bajo metodología Scrum.</p>
+          <div class="tech-tags">
+            <span>Java</span><span>Spring Boot</span><span>GitHub</span>
+          </div>
+        </div>
+
+      </div>
+      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+    </section>
+
+    <!-- SECCIÓN: HABILIDADES -->
+    <section id="habilidades" class="content-section">
+      <h2><i class="fas fa-cogs text-primary"></i> Stack Técnico</h2>
+      <div class="card-container">
+        
+        <h3 class="section-subtitle">Backend & Lenguajes</h3>
+        <div class="logos">
+          <img src="img/java.png" title="Java" alt="Java"><img src="img/python.png" title="Python" alt="Python">
+          <img src="img/spring.png" title="Spring Boot" alt="Spring"><img src="img/django.png" title="Django" alt="Django">
+          <img src="img/c++.png" title="C++" alt="C++"><img src="img/kotlin.png" title="Kotlin" alt="Kotlin">
+        </div>
+
+        <h3 class="section-subtitle">Bases de Datos</h3>
+        <div class="logos">
+          <img src="img/mysql.png" title="MySQL" alt="MySQL"><img src="img/MariaDB.png" title="MariaDB" alt="MariaDB">
+          <img src="img/MongoDB.jpg" title="MongoDB" alt="MongoDB"><img src="img/firebase.png" title="Firebase" alt="Firebase">
+        </div>
+
+        <h3 class="section-subtitle">Cloud, DevOps & Herramientas</h3>
+        <div class="logos">
+          <img src="img/docker.png" title="Docker" alt="Docker"><img src="img/googlecloud.jpg" title="Google Cloud" alt="GCP">
+          <img src="img/MicrosoftAzure.png" title="Azure" alt="Azure"><img src="img/git.png" title="Git" alt="Git">
+          <img src="img/GitHub.png" title="GitHub" alt="GitHub">
+        </div>
+
+      </div>
+      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+    </section>
+
+    <!-- SECCIÓN: EDUCACIÓN -->
+    <section id="educacion" class="content-section">
+      <h2><i class="fas fa-graduation-cap text-primary"></i> Educación e Idiomas</h2>
+      <div class="grid-container">
+        
+        <div class="card-container text-center">
+          <img src="img/UHU.png" alt="UHU" class="inst-logo">
+          <h3>Máster en Big Data y Cloud Computing</h3>
+          <p>Universidad de Huelva (En curso)</p>
+        </div>
+
+        <div class="card-container text-center">
+          <img src="img/UHU.png" alt="UHU" class="inst-logo">
+          <h3>Grado en Ingeniería Informática</h3>
+          <p>Universidad de Huelva (2019 - 2024)<br>Especialidad: Ingeniería del Software</p>
+        </div>
+
+        <div class="card-container text-center">
+          <i class="fas fa-language fa-3x text-primary mb-2"></i>
+          <h3>Idiomas</h3>
+          <p><strong>Español:</strong> Nativo<br><strong>Inglés:</strong> Técnico e Intermedio (en preparación para B2)</p>
+        </div>
+
+      </div>
+      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+    </section>
+
+    <!-- SECCIÓN: CERTIFICACIONES -->
+    <section id="certificaciones" class="content-section">
+      <h2><i class="fas fa-certificate text-primary"></i> Certificaciones Oficiales</h2>
+      <div class="grid-container">
+        
+        <div class="cert-card">
+          <img src="img/googlecloud.jpg" alt="Google">
+          <div>
+            <h4>Big Data & Machine Learning Fundamentals</h4>
+            <p>Google Cloud Skills Boost</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="img/cisco.png" alt="Cisco">
+          <div>
+            <h4>CCNA Routing & Switching</h4>
+            <p>Cisco Networking Academy</p>
+            <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank" class="cert-link">Ver credencial</a>
+          </div>
+        </div>
+
+      </div>
+      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO -->
+    <section id="contacto" class="content-section">
+      <div class="card-container text-center">
+        <h2><i class="fas fa-paper-plane text-primary"></i> ¿Hablamos?</h2>
+        <p>Actualmente abierto a nuevas oportunidades profesionales.</p>
+        
+        <div class="contact-links mt-4">
+          <a href="mailto:alvarodm76@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> alvarodm76@gmail.com</a>
+          <a href="tel:+34653492650" class="contact-item"><i class="fas fa-phone"></i> +34 653 492 650</a>
+          <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+
+        <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Álvaro Domínguez Mora. Diseñado con código limpio.</p>
+  </footer>
+
+  <!-- Modal Video -->
+  <div id="modalVideo" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="cerrarVideo()">&times;</span>
+      <video id="videoProyecto" controls>
+        <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
+        Tu navegador no soporta este video.
+      </video>
     </div>
-
-    <div class="menu">
-      <a href="#" class="menu-card" id="about-me-link"><i class="fas fa-user"></i><br> Sobre mí</a>
-      <a href="#proyectos" class="menu-card"><i class="fas fa-project-diagram"></i><br> Proyectos</a>
-      <a href="#experiencia" class="menu-card"><i class="fas fa-briefcase"></i><br> Experiencia</a>
-      <a href="#educacion" class="menu-card"><i class="fas fa-graduation-cap"></i><br> Educación</a>
-      <a href="#certificaciones" class="menu-card"><i class="fas fa-certificate"></i><br> Certificaciones</a>
-      <a href="#habilidades" class="menu-card"><i class="fas fa-code"></i><br> Habilidades</a>
-      <a href="#contacto" class="menu-card"><i class="fas fa-envelope"></i><br> Contacto</a>
-    </div>
-
-    <a href="info/CV Álvaro.pdf" class="download-btn" download>
-      <i class="fas fa-file-download"></i> Descargar CV
-    </a>
   </div>
 
   <script>
-    document.getElementById("about-me-link").addEventListener("click", function() {
-      var mainContent = document.getElementById("main-content");
-      mainContent.innerHTML = `
-        <div class="about-me">
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 1.5rem;">
-            Mi nombre es Álvaro Domínguez Mora, y desde temprana edad he cultivado una profunda pasión por el mundo de la informática. La innovación, la exploración y la búsqueda constante de soluciones son elementos que siempre me han acompañado a lo largo de mi vida. A los 18 años, comencé mi trayectoria académica en el grado de Ingeniería Informática en la Universidad de Huelva, un período en el que adquirí una sólida formación en diversas áreas de la programación, abarcando desde el desarrollo de aplicaciones hasta la creación de soluciones personalizadas para una variedad de industrias.
-          </p>
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 1.5rem;">
-            Hoy, como Ingeniero Informático especializado en el ámbito del software, una disciplina que me resulta particularmente fascinante, continúo buscando nuevos desafíos y oportunidades para seguir creciendo en el vasto campo de la tecnología. Mi objetivo es contribuir al desarrollo de soluciones innovadoras y poner mis conocimientos y habilidades al servicio de proyectos que realmente puedan marcar una diferencia tangible.
-          </p>
-          <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 1.5rem;">
-            Mi especialización radica en la creación de software que no solo resuelve problemas, sino que también mejora la experiencia del usuario, optimiza procesos y genera valor para las empresas. Mi enfoque se centra en la programación, el diseño de sistemas y la integración de nuevas tecnologías, con el fin de desarrollar productos que se adapten a las necesidades específicas de cada cliente. Estoy en la búsqueda constante de proyectos que me desafíen y me permitan ofrecer soluciones creativas y efectivas.
-          </p>
-          <a href="#" class="back-btn" id="back-btn">Volver</a>
-        </div>
-      `;
-
-      document.getElementById("back-btn").addEventListener("click", function() {
-        window.location.reload(); // Esto recarga la página y vuelve al contenido inicial
+    // Lógica limpia para mostrar/ocultar secciones sin reescribir el DOM
+    function showSection(sectionId) {
+      // Ocultar todas las secciones
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(sec => {
+        sec.classList.remove('active');
       });
-    });
-         document.querySelector('a[href="#educacion"]').addEventListener("click", function(event) {
-    event.preventDefault();
-    var mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = `
-    <div class="about-me">
-      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-        <i class="fas fa-graduation-cap"></i> Educación
-      </h2>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-        <!-- Universidad de Huelva -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
-          <img src="img/UHU.png" alt="Universidad de Huelva" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
-          <h3 style="color: #1e2a38; text-align: center;">Grado en Ingeniería Informática</h3>
-          <div style="text-align: center;">
-            <p style="color: #444;">Universidad de Huelva</p>
-            <p style="font-size: 0.95rem; color: #666;">Modalidad: Ingeniería del Software</p>
-            <p style="font-size: 0.9rem; color: #999;">Octubre 2019 - Julio 2024</p>
-          </div>
-        </div>
+      // Mostrar la sección solicitada
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
 
-        <!-- Certificación APTIS -->
-        <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center;">
-          <img src="img/APTIS.png" alt="British Council" style="height: 80px; object-fit: contain; margin-bottom: 15px;">
-          <h3 style="color: #1e2a38; text-align: center;">Certificación Oficial APTIS</h3>
-          <div style="text-align: center;">
-            <p style="color: #444;">British Council</p>
-            <p style="font-size: 0.95rem; color: #666;">Nivel B1 (MCERL)</p>
-            <p style="font-size: 0.9rem; color: #999;">Febrero 2024 - Abril 2024</p>
-          </div>
-        </div>
-      </div>
+    // Funciones del Modal de vídeo
+    function abrirVideo() {
+      document.getElementById('modalVideo').style.display = 'flex';
+    }
 
-      <a href="#" class="back-btn" id="back-btn-educacion" style="display: inline-block; margin-top: 40px; color: #fff; background-color: #007BFF; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver</a>
-    </div>
-    `;
-
-    document.getElementById("back-btn-educacion").addEventListener("click", function() {
-      window.location.reload();
-    });
-  });
-
-  document.querySelector('a[href="#certificaciones"]').addEventListener("click", function(event) {
-    event.preventDefault();
-
-    var mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = `
-      <div class="certificaciones">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-          <i class="fas fa-certificate"></i> Certificaciones
-        </h2>
-
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-
-          <!-- Certificado 1 -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
-            <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
-            <div>
-              <h3 style="color: #1e2a38;">Introducción a redes</h3>
-              <p style="color: #444;">Cisco Networking Academy</p>
-              <p style="font-size: 0.95rem; color: #666;">Año: 2021 — 150 horas</p>
-            </div>
-            <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank">
-              <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
-            </a>
-          </div>
-
-          <!-- Certificado 2 -->
-          <div style="background: white; border-radius: 12px; padding: 20px; width: 300px; height: 420px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center;">
-            <img src="img/cisco.png" alt="Cisco Networking Academy" style="width: 100px;">
-            <div>
-              <h3 style="color: #1e2a38;">Principios básicos de routing y switching</h3>
-              <p style="color: #444;">Cisco Networking Academy</p>
-              <p style="font-size: 0.95rem; color: #666;">Año: 2022 — 150 horas</p>
-            </div>
-            <a href="info/ÁlvaroDomínguez Mora-CCNA2_RS202122-certificate.pdf" target="_blank">
-              <img src="img/ver.png" alt="Ver certificado" style="width: 32px;">
-            </a>
-          </div>
-
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="back-btn" id="back-btn-certificaciones" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-        </div>
-      </div>
-    `;
-
-    // Botón "Volver"
-    document.getElementById("back-btn-certificaciones").addEventListener("click", function() {
-      window.location.reload();
-    });
-  });
-document.querySelector('a[href="#experiencia"]').addEventListener("click", function(event) {
-    event.preventDefault();
-
-    var mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = `
-      <div class="experiencia">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333; font-weight: bold;">
-          <i class="fas fa-briefcase"></i> Experiencia
-        </h2>
-
-        <div style="background: #fff; border-radius: 12px; padding: 25px; max-width: 700px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 1.05rem; color: #444; line-height: 1.6;">
-          Aún no he tenido la oportunidad de trabajar en el sector tecnológico, aunque durante mi grado he tenido la experiencia de desempeñar otros trabajos en paralelo.  
-          <br><br>
-          Aunque es cierto que los recién graduados a menudo se enfrentan a dificultades para acceder a su primera oportunidad profesional, estoy convencido de que mi momento llegará.  
-          <br><br>
-          A veces puede resultar algo frustrante, pero estoy seguro de que las oportunidades aparecerán. He invertido años de esfuerzo y dedicación para formarme, y aunque aún no he tenido la oportunidad de demostrar todo lo que sé, estoy emocionado de que mi momento está por llegar. ¡Cuando llegue, estaré más que listo para afrontar el desafío con toda mi energía y determinación!  
-          <br><br>
-          Mi motivación es alta, tengo muchas ganas de aprender, crecer y afrontar este primer desafío profesional. Estoy preparado para poner en práctica lo aprendido y aportar todo lo que sé y lo que soy capaz de hacer.
-        </div>
-        
-        <!-- Imagen motivacional -->
-        <div style="text-align: center; margin-top: 20px;">
-          <img src="img/motivacion.png" alt="Motivación" class="motivacion-img">
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="#" class="back-btn" id="back-btn-experiencia" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-        </div>
-      </div>
-    `;
-
-    document.getElementById("back-btn-experiencia").addEventListener("click", function() {
-      window.location.reload();
-    });
-  });
-  document.querySelector('a[href="#habilidades"]').addEventListener("click", function(event) {
-  event.preventDefault();
-
-  const mainContent = document.getElementById("main-content");
-  mainContent.innerHTML = `
-    <div class="habilidades" style="font-family: 'Poppins', sans-serif; color: #000;">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #000; font-weight: 700; letter-spacing: 1px;">
-        <i class="fas fa-cogs"></i> Habilidades
-      </h2>
-
-      <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; max-width: 1000px; margin: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); font-size: 1.1rem; line-height: 1.8; color: #000;">
-        
-        <!-- Lenguajes -->
-        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Lenguajes de Programación</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
-          ${['c++', 'c', 'kotlin', 'java', 'javascript', 'python', 'HTML', 'CSS'].map(lang => `
-            <img src="img/${lang}.png" alt="${lang}" style="width: 60px; height: auto; object-fit: contain;">
-          `).join('')}
-        </div>
-
-        <!-- Frameworks -->
-        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Frameworks</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
-          <img src="img/django.png" alt="Django" style="width: 60px; height: auto;">
-          <img src="img/spring.png" alt="Spring Boot" style="width: 60px; height: auto;">
-        </div>
-
-        <!-- Bases de Datos -->
-        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Bases de Datos</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
-          <img src="img/mysql.png" alt="MySQL" style="width: 60px;">
-          <img src="img/MariaDB.png" alt="MariaDB" style="width: 60px;">
-          <img src="img/MongoDB.jpg" alt="MongoDB" style="width: 60px;">
-          <img src="img/firebase.png" alt="Firebase" style="width: 60px;">
-        </div>
-
-        <!-- Herramientas -->
-        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">Herramientas, Plataformas y Metodologías</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 20px;">
-          <img src="img/git.png" alt="Git" style="width: 60px;">
-          <img src="img/GitHub.png" alt="GitHub" style="width: 60px;">
-          <img src="img/docker.png" alt="Docker" style="width: 60px;">
-          <img src="img/googlecloud.jpg" alt="Google Cloud" style="width: 60px;">
-          <img src="img/MicrosoftAzure.png" alt="Azure" style="width: 60px;">
-          <img src="img/apache.png" alt="Apache" style="width: 60px;">
-        </div>
-        <p style="text-align: center; color: #000;">Arquitectura Hexagonal, MVC, Scrum</p>
-
-        <!-- IDEs -->
-        <h3 style="color: #000; font-size: 1.5rem; margin-bottom: 1rem;">IDEs</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-          <img src="img/pycharm.png" alt="PyCharm" style="width: 60px;">
-          <img src="img/eclipse.png" alt="Eclipse" style="width: 60px;">
-        </div>
-      </div>
-
-      <!-- Botón Volver (estilo igual al de experiencia) -->
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#" class="back-btn" id="back-btn-habilidades" style="text-decoration: none; color: #fff; background: #007bff; padding: 10px 20px; border-radius: 8px; font-weight: bold;">Volver</a>
-      </div>
-    </div>
-  `;
-
-  document.getElementById("back-btn-habilidades").addEventListener("click", function () {
-    window.location.reload();
-  });
-});
-document.querySelector('a[href="#proyectos"]').addEventListener("click", function(event) {
-  event.preventDefault();
-
-  const mainContent = document.getElementById("main-content");
-  mainContent.innerHTML = `
-    <div class="proyectos" style="font-family: 'Poppins', sans-serif; color: #000;">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: #000; font-weight: 700; letter-spacing: 1px;">
-        <i class="fas fa-laptop-code"></i> Proyectos
-      </h2>
-
-      <p style="text-align: center; color: #555; margin-bottom: 40px; font-size: 1rem;">
-        Aquí puedes ver algunos de los proyectos que he desarrollado a lo largo de mi formación.
-      </p>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-
-        <!-- Proyecto 1 -->
-        <div style="background: #f7f9fc; border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
-          <div style="margin-bottom: 10px;">
-            <i class="fas fa-map-marked-alt" style="font-size: 28px; color: #007bff;"></i>
-          </div>
-          <h3 style="color: #1e2a38;">App Móvil – Rutas Turísticas</h3>
-          <p style="color: #444;">Frontend en Kotlin, backend en Django REST y despliegue en Google Cloud Run. Mapa interactivo, roles, filtros y base de datos en MySQL.</p>
-          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Kotlin · Django · Google Cloud · Docker</p>
-          <button onclick="abrirVideo()" style="margin-top: 10px; padding: 10px 16px; background-color: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer;">
-            <i class="fas fa-play-circle"></i> Ver Video
-          </button>
-        </div>
-
-        
-        <!-- Proyecto 2 -->
-        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
-          <div style="margin-bottom: 10px;">
-            <i class="fas fa-tasks" style="font-size: 28px; color: #28a745;"></i>
-          </div>
-          <h3 style="color: #1e2a38;">Gestión de Tareas (Web)</h3>
-          <p style="color: #444;">Aplicación colaborativa basada en Spring Boot con arquitectura hexagonal. Seguimiento de tareas con metodología Scrum y control de versiones.</p>
-          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Spring Boot · GitHub · Scrum</p>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
-          <div style="margin-bottom: 10px;">
-            <i class="fas fa-university" style="font-size: 28px; color: #dc3545;"></i>
-          </div>
-          <h3 style="color: #1e2a38;">Gestión Académica ACMEDANCE</h3>
-          <p style="color: #444;">Web app en Java Spring, con Hibernate y despliegue en Tomcat. Gestión de estudiantes, profesores y asignaturas.</p>
-          <p style="font-size: 0.85rem; color: #777;">Tecnologías: Java · Hibernate · Spring MVC</p>
-        </div>
-
-        <!-- Proyecto 4 -->
-        <div class="project-card" style="background: linear-gradient(135deg, #ffffff, #f7f9fc); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; text-align: left;">
-          <div style="margin-bottom: 10px;">
-            <i class="fas fa-dumbbell" style="font-size: 28px; color: #ffc107;"></i>
-          </div>
-          <h3 style="color: #1e2a38;">Admin. Gimnasios (Full Stack)</h3>
-          <p style="color: #444;">Desarrollo full stack con HTML, CSS, JS y backend en Spring Boot con integración a Oracle y migración a Hibernate ORM.</p>
-          <p style="font-size: 0.85rem; color: #777;">Tecnologías: JavaScript · Spring · Oracle · Hibernate</p>
-        </div>
-
-      </div>
-      <div style="text-align: center; margin-top: 50px;">
-        <a href="#" id="back-btn-proyectos" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold; transition: background 0.3s;">Volver</a>
-      </div>
-    </div>
-     <!-- Modal de Video -->
-<div id="modalVideo" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
-  <div style="position:relative; width:80%; max-width:800px;">
-    <video id="videoProyecto" controls style="width:100%; border-radius: 12px;">
-      <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
-      Tu navegador no soporta este video.
-    </video>
-    <button onclick="cerrarVideo()" style="position:absolute; top:-15px; right:-15px; background:red; color:white; border:none; border-radius:50%; width:35px; height:35px; font-weight:bold; font-size:16px; cursor:pointer;">&times;</button>
-  </div>
-</div>
-
-  `;
-
-  // Función para recargar
-  document.getElementById("back-btn-proyectos").addEventListener("click", function () {
-    window.location.reload();
-  });
-
-  // abrir/cerrar video
-  window.abrirVideo = function () {
-    document.getElementById("modalVideo").style.display = "flex";
-  };
-
-  window.cerrarVideo = function () {
-    const video = document.getElementById("videoProyecto");
-    video.pause();       // Pausa el video
-    video.currentTime = 0; // (opcional) Reinicia desde el inicio
-    document.getElementById("modalVideo").style.display = "none";
-  };
-
-});
-document.querySelector('a[href="#contacto"]').addEventListener("click", function(event) {
-  event.preventDefault();
-
-  const mainContent = document.getElementById("main-content");
-  mainContent.innerHTML = `
-    <div class="contacto" style="font-family: 'Poppins', sans-serif; color: #000;">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; font-weight: 700; letter-spacing: 1px;">
-        <i class="fas fa-phone"></i> Contacto
-      </h2>
-
-      <p style="text-align: center; color: #555; margin-bottom: 40px; font-size: 1rem;">
-        Puedes ponerte en contacto conmigo a través de los siguientes medios:
-      </p>
-
-      <div style="font-size: 1.2rem; margin-bottom: 30px; text-align: center;">
-        <p><i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:+34653492650" style="color: #007bff;">653492650</a></p>
-        <p><i class="fas fa-envelope"></i> Correo: <a href="mailto:alvarodm76@gmail.com" style="color: #007bff;">alvarodm76@gmail.com</a></p>
-      </div>
-
-      <div style="text-align: center; margin-bottom: 40px;">
-        <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" style="text-decoration: none; color: #007bff;">
-          <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
-        </a>
-      </div>
-
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#" id="back-btn-contacto" style="text-decoration: none; color: white; background: #007bff; padding: 12px 24px; border-radius: 10px; font-weight: bold; transition: background 0.3s;">Volver</a>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 50px; font-size: 1rem; color: #777;">
-      <p>&copy; 2025 Álvaro Domínguez. Todos los derechos reservados.</p>
-    </div>
-  `;
-
-  document.getElementById("back-btn-contacto").addEventListener("click", function () {
-    window.location.reload();
-  });
-});
-</script>
-
+    function cerrarVideo() {
+      const modal = document.getElementById('modalVideo');
+      const video = document.getElementById('videoProyecto');
+      video.pause();
+      video.currentTime = 0;
+      modal.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
