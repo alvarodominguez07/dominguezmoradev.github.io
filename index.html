@@ -3,257 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Álvaro Domínguez Mora | Desarrollador Full-stack</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Álvaro Domínguez | Software Engineer</title>
   <link rel="icon" type="image/png" href="img/favicon.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <div class="header-content">
-      <h1>Álvaro Domínguez Mora</h1>
-      <p>Desarrollador Full-stack / Backend | Software Engineer</p>
+  <nav id="navbar">
+    <div class="nav-content">
+      <div class="logo">Álvaro<span class="text-gradient">.dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#contact" class="btn-nav">Contacto</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <div class="container">
-    
-    <!-- SECCIÓN: INICIO (Menú principal) -->
-    <section id="inicio" class="content-section active">
-      <img src="info/orla.jpg" alt="Álvaro Domínguez" class="profile-photo">
-      
-      <div class="intro">
-        <h2>Construyendo software escalable y eficiente</h2>
-        <p>Especializado en el ecosistema Java, Python y arquitecturas Cloud. Explora mi portfolio para conocer mi experiencia y los proyectos en los que he trabajado.</p>
-      </div>
-
-      <div class="menu">
-        <button class="menu-card" onclick="showSection('sobre-mi')"><i class="fas fa-user"></i><br> Sobre mí</button>
-        <button class="menu-card" onclick="showSection('experiencia')"><i class="fas fa-briefcase"></i><br> Experiencia</button>
-        <button class="menu-card" onclick="showSection('proyectos')"><i class="fas fa-laptop-code"></i><br> Proyectos</button>
-        <button class="menu-card" onclick="showSection('habilidades')"><i class="fas fa-code"></i><br> Stack Técnico</button>
-        <button class="menu-card" onclick="showSection('educacion')"><i class="fas fa-graduation-cap"></i><br> Educación</button>
-        <button class="menu-card" onclick="showSection('certificaciones')"><i class="fas fa-certificate"></i><br> Certificaciones</button>
-        <button class="menu-card" onclick="showSection('contacto')"><i class="fas fa-envelope"></i><br> Contacto</button>
-      </div>
-
-      <a href="info/CV_Alvaro.pdf" class="download-btn" download>
-        <i class="fas fa-file-download"></i> Descargar CV
-      </a>
-    </section>
-
-    <!-- SECCIÓN: SOBRE MÍ -->
-    <section id="sobre-mi" class="content-section">
-      <div class="card-container">
-        <h2><i class="fas fa-user text-primary"></i> Sobre mí</h2>
-        <p>Hola, soy Álvaro. Soy Ingeniero Informático enfocado en el desarrollo Full-stack y Backend. Me dedico a construir servicios REST robustos, migrar sistemas legacy y desarrollar aplicaciones web y móviles.</p>
-        <p>Mi stack principal se centra en <strong>Java (Spring Boot)</strong> y <strong>Python</strong>, con experiencia en despliegues en la nube usando <strong>Google Cloud (GCP)</strong> y <strong>Azure</strong>. Me obsesiona el código limpio, la arquitectura hexagonal y la automatización de procesos para ahorrar tiempo y recursos.</p>
-        <p>Actualmente estoy cursando un Máster en Big Data y Cloud Computing para profundizar en la ingeniería de datos y el machine learning aplicado.</p>
-        <button class="back-btn" onclick="showSection('inicio')">Volver al inicio</button>
-      </div>
-    </section>
-
-    <!-- SECCIÓN: EXPERIENCIA -->
-    <section id="experiencia" class="content-section">
-      <h2><i class="fas fa-briefcase text-primary"></i> Experiencia Laboral</h2>
-      
-      <div class="job-card text-left">
-        <div class="job-header">
-          <h3>Ingeniero Software</h3>
-          <span class="job-date">Nov. 2025 – Actualidad</span>
-        </div>
-        <h4 class="company-name">Sosein</h4>
-        <ul class="job-tasks">
-          <li>Refactorización y modernización de aplicaciones legacy en Android (Java), adaptándolas a versiones actuales del SDK y reduciendo cuelgues (crashes).</li>
-          <li>Desarrollo de scripts en Python para la automatización de procesos internos, reduciendo tiempos manuales de gestión.</li>
-          <li>Integración de sistemas mediante Python y PHP como capa intermedia de intercambio de información.</li>
-          <li>Gestión, mantenimiento y consultas optimizadas sobre bases de datos MySQL.</li>
-          <li>Despliegue y configuración de plataformas en Microsoft Azure.</li>
-          <li>Soporte técnico interno y resolución de incidencias IT.</li>
-        </ul>
-        <div class="tech-tags">
-          <span>Java</span><span>Android SDK</span><span>Python</span><span>PHP</span><span>MySQL</span><span>Azure</span>
+  <main>
+    <section id="hero">
+      <div class="hero-content reveal">
+        <p class="mono-text">Hola, mi nombre es</p>
+        <h1 class="big-heading">Álvaro Domínguez.</h1>
+        <h2 class="big-heading text-muted">Construyo software que escala.</h2>
+        <p class="hero-desc">Soy un Software Engineer especializado en el ecosistema Java, Python y arquitecturas Cloud. Transformo problemas complejos en soluciones técnicas eficientes, robustas y automatizadas.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">Ver Proyectos</a>
+          <a href="info/CV_Alvaro.pdf" class="btn-secondary" download><i class="fas fa-download"></i> Descargar CV</a>
         </div>
       </div>
-      
-      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
     </section>
 
-    <!-- SECCIÓN: PROYECTOS -->
-    <section id="proyectos" class="content-section">
-      <h2><i class="fas fa-laptop-code text-primary"></i> Proyectos Destacados</h2>
-      <div class="grid-container">
+    <section id="about" class="section">
+      <h2 class="section-title reveal"><span class="mono-text">01.</span> Sobre mí</h2>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>Ingeniero Informático enfocado en el desarrollo Full-stack y Backend. Mi pasión es diseñar servicios REST robustos, migrar sistemas legacy y desarrollar aplicaciones que aporten valor real.</p>
+          <p>Actualmente mi stack principal se centra en <strong>Java (Spring Boot)</strong> y <strong>Python</strong>, orquestando despliegues en <strong>Google Cloud (GCP)</strong> y <strong>Azure</strong>. Aplico principios de arquitectura hexagonal y Clean Code en cada línea que escribo.</p>
+          <p>Sigo formándome constantemente; actualmente curso un Máster en Big Data y Cloud Computing para llevar mis habilidades analíticas y de infraestructura al siguiente nivel.</p>
+        </div>
+        <div class="about-image-wrapper">
+          <div class="image-frame">
+            <img src="info/orla.jpg" alt="Álvaro Domínguez" class="profile-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2 class="section-title reveal"><span class="mono-text">02.</span> Experiencia</h2>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">Nov. 2025 – Actualidad</span>
+            <h3>Ingeniero Software <span class="text-gradient">@ Sosein</span></h3>
+            <ul>
+              <li>Refactorización y modernización de aplicaciones legacy en Android (Java), optimizando el rendimiento y reduciendo crash rates.</li>
+              <li>Desarrollo de scripts Python para automatización de procesos internos, reduciendo drásticamente los tiempos de gestión manual.</li>
+              <li>Arquitectura de integración de sistemas utilizando Python y PHP como middleware.</li>
+              <li>Administración y optimización de consultas complejas en MySQL.</li>
+              <li>Gestión de infraestructura y despliegues en entornos Microsoft Azure.</li>
+            </ul>
+            <div class="tech-pill-container">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Android SDK</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">PHP</span>
+              <span class="tech-pill">Azure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title reveal"><span class="mono-text">03.</span> Proyectos Destacados</h2>
+      <div class="projects-grid">
         
-        <div class="project-card">
-          <i class="fas fa-cubes text-primary project-icon"></i>
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
           <h3>MNGPyme (Mini-ERP)</h3>
-          <p>Plataforma modular con automatización y análisis. IA integrada con OpenAI para análisis inteligente de datos y generación dinámica de PDFs.</p>
-          <div class="tech-tags">
+          <p>Plataforma modular corporativa. Integra un motor de IA (OpenAI) para análisis inteligente de datos y generación dinámica de reportes en PDF.</p>
+          <div class="project-tech">
             <span>React</span><span>NestJS</span><span>PostgreSQL</span><span>FastAPI</span><span>Docker</span>
           </div>
         </div>
 
-        <div class="project-card">
-          <i class="fas fa-map-marked-alt text-primary project-icon"></i>
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="project-links">
+              <button onclick="abrirVideo()" class="icon-btn"><i class="fas fa-play"></i></button>
+            </div>
+          </div>
           <h3>App Rutas Turísticas</h3>
-          <p>Aplicación Android con arquitectura modular. Autenticación, control de roles y despliegue cloud.</p>
-          <div class="tech-tags">
-            <span>Kotlin</span><span>Django REST</span><span>Google Cloud Run</span><span>MySQL</span>
+          <p>Aplicación Android nativa con arquitectura modular. Implementa autenticación segura, control de roles de usuario y despliegue automatizado en la nube.</p>
+          <div class="project-tech">
+            <span>Kotlin</span><span>Django REST</span><span>Cloud Run</span><span>MySQL</span>
           </div>
-          <button onclick="abrirVideo()" class="btn-sm"><i class="fas fa-play"></i> Ver Demo</button>
         </div>
 
-        <div class="project-card">
-          <i class="fas fa-tasks text-primary project-icon"></i>
-          <h3>Gestor de Tareas</h3>
-          <p>API Backend con arquitectura hexagonal para la gestión de proyectos bajo metodología Scrum.</p>
-          <div class="tech-tags">
-            <span>Java</span><span>Spring Boot</span><span>GitHub</span>
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <i class="far fa-folder-open folder-icon"></i>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>API Gestor de Tareas</h3>
+          <p>Backend robusto construido bajo arquitectura hexagonal. Diseñado para gestionar flujos de trabajo basados en metodologías ágiles (Scrum).</p>
+          <div class="project-tech">
+            <span>Java</span><span>Spring Boot</span><span>Arquitectura Hexagonal</span>
           </div>
         </div>
 
       </div>
-      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
     </section>
 
-    <!-- SECCIÓN: HABILIDADES -->
-    <section id="habilidades" class="content-section">
-      <h2><i class="fas fa-cogs text-primary"></i> Stack Técnico</h2>
-      <div class="card-container">
-        
-        <h3 class="section-subtitle">Backend & Lenguajes</h3>
-        <div class="logos">
-          <img src="img/java.png" title="Java" alt="Java"><img src="img/python.png" title="Python" alt="Python">
-          <img src="img/spring.png" title="Spring Boot" alt="Spring"><img src="img/django.png" title="Django" alt="Django">
-          <img src="img/c++.png" title="C++" alt="C++"><img src="img/kotlin.png" title="Kotlin" alt="Kotlin">
+    <section id="skills" class="section">
+      <h2 class="section-title reveal"><span class="mono-text">04.</span> Stack Técnico</h2>
+      <div class="skills-container reveal">
+        <div class="skill-category glass-card">
+          <h3>Backend & Core</h3>
+          <div class="skill-grid">
+            <div class="skill-item"><img src="img/java.png" alt="Java"><span>Java</span></div>
+            <div class="skill-item"><img src="img/python.png" alt="Python"><span>Python</span></div>
+            <div class="skill-item"><img src="img/spring.png" alt="Spring"><span>Spring Boot</span></div>
+            <div class="skill-item"><img src="img/django.png" alt="Django"><span>Django</span></div>
+            <div class="skill-item"><img src="img/kotlin.png" alt="Kotlin"><span>Kotlin</span></div>
+            <div class="skill-item"><img src="img/c++.png" alt="C++"><span>C++</span></div>
+          </div>
         </div>
-
-        <h3 class="section-subtitle">Bases de Datos</h3>
-        <div class="logos">
-          <img src="img/mysql.png" title="MySQL" alt="MySQL"><img src="img/MariaDB.png" title="MariaDB" alt="MariaDB">
-          <img src="img/MongoDB.jpg" title="MongoDB" alt="MongoDB"><img src="img/firebase.png" title="Firebase" alt="Firebase">
+        <div class="skill-category glass-card">
+          <h3>Data & Infraestructura</h3>
+          <div class="skill-grid">
+            <div class="skill-item"><img src="img/mysql.png" alt="MySQL"><span>MySQL</span></div>
+            <div class="skill-item"><img src="img/MongoDB.jpg" alt="MongoDB"><span>MongoDB</span></div>
+            <div class="skill-item"><img src="img/docker.png" alt="Docker"><span>Docker</span></div>
+            <div class="skill-item"><img src="img/googlecloud.jpg" alt="GCP"><span>GCP</span></div>
+            <div class="skill-item"><img src="img/MicrosoftAzure.png" alt="Azure"><span>Azure</span></div>
+            <div class="skill-item"><img src="img/git.png" alt="Git"><span>Git</span></div>
+          </div>
         </div>
-
-        <h3 class="section-subtitle">Cloud, DevOps & Herramientas</h3>
-        <div class="logos">
-          <img src="img/docker.png" title="Docker" alt="Docker"><img src="img/googlecloud.jpg" title="Google Cloud" alt="GCP">
-          <img src="img/MicrosoftAzure.png" title="Azure" alt="Azure"><img src="img/git.png" title="Git" alt="Git">
-          <img src="img/GitHub.png" title="GitHub" alt="GitHub">
-        </div>
-
       </div>
-      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
     </section>
 
-    <!-- SECCIÓN: EDUCACIÓN -->
-    <section id="educacion" class="content-section">
-      <h2><i class="fas fa-graduation-cap text-primary"></i> Educación e Idiomas</h2>
-      <div class="grid-container">
-        
-        <div class="card-container text-center">
-          <img src="img/UHU.png" alt="UHU" class="inst-logo">
+    <section id="education" class="section">
+      <h2 class="section-title reveal"><span class="mono-text">05.</span> Background</h2>
+      <div class="edu-grid reveal">
+        <div class="glass-card flex-center">
+          <i class="fas fa-university text-gradient fa-2x mb-3"></i>
           <h3>Máster en Big Data y Cloud Computing</h3>
           <p>Universidad de Huelva (En curso)</p>
         </div>
-
-        <div class="card-container text-center">
-          <img src="img/UHU.png" alt="UHU" class="inst-logo">
+        <div class="glass-card flex-center">
+          <i class="fas fa-graduation-cap text-gradient fa-2x mb-3"></i>
           <h3>Grado en Ingeniería Informática</h3>
-          <p>Universidad de Huelva (2019 - 2024)<br>Especialidad: Ingeniería del Software</p>
+          <p>Universidad de Huelva (2019 - 2024)<br>Ingeniería del Software</p>
         </div>
-
-        <div class="card-container text-center">
-          <i class="fas fa-language fa-3x text-primary mb-2"></i>
-          <h3>Idiomas</h3>
-          <p><strong>Español:</strong> Nativo<br><strong>Inglés:</strong> Técnico e Intermedio (en preparación para B2)</p>
+        <div class="glass-card flex-center">
+          <i class="fas fa-award text-gradient fa-2x mb-3"></i>
+          <h3>Certificaciones</h3>
+          <p>Google Cloud Big Data & ML<br>Cisco CCNA Routing & Switching</p>
         </div>
-
       </div>
-      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
     </section>
 
-    <!-- SECCIÓN: CERTIFICACIONES -->
-    <section id="certificaciones" class="content-section">
-      <h2><i class="fas fa-certificate text-primary"></i> Certificaciones Oficiales</h2>
-      <div class="grid-container">
+    <section id="contact" class="section">
+      <div class="contact-content reveal text-center">
+        <h2 class="mono-text text-gradient">06. ¿Qué sigue?</h2>
+        <h1 class="big-heading">Ponte en contacto</h1>
+        <p>Actualmente estoy abierto a nuevas oportunidades donde pueda aportar valor técnico, optimizar procesos y seguir creciendo como ingeniero. Si tienes un proyecto o una vacante interesante, mi bandeja de entrada está abierta.</p>
+        <a href="mailto:alvarodm76@gmail.com" class="btn-primary mt-4">Di Hola</a>
         
-        <div class="cert-card">
-          <img src="img/googlecloud.jpg" alt="Google">
-          <div>
-            <h4>Big Data & Machine Learning Fundamentals</h4>
-            <p>Google Cloud Skills Boost</p>
-          </div>
+        <div class="social-links mt-5">
+          <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:alvarodm76@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+34653492650"><i class="fas fa-phone"></i></a>
         </div>
-
-        <div class="cert-card">
-          <img src="img/cisco.png" alt="Cisco">
-          <div>
-            <h4>CCNA Routing & Switching</h4>
-            <p>Cisco Networking Academy</p>
-            <a href="info/ÁlvaroDomínguez Mora-CCNA1_ITN202021-certificate.pdf" target="_blank" class="cert-link">Ver credencial</a>
-          </div>
-        </div>
-
-      </div>
-      <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
-    </section>
-
-    <!-- SECCIÓN: CONTACTO -->
-    <section id="contacto" class="content-section">
-      <div class="card-container text-center">
-        <h2><i class="fas fa-paper-plane text-primary"></i> ¿Hablamos?</h2>
-        <p>Actualmente abierto a nuevas oportunidades profesionales.</p>
-        
-        <div class="contact-links mt-4">
-          <a href="mailto:alvarodm76@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> alvarodm76@gmail.com</a>
-          <a href="tel:+34653492650" class="contact-item"><i class="fas fa-phone"></i> +34 653 492 650</a>
-          <a href="https://www.linkedin.com/in/alvaro-dominguez-59bb9b2b3/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        </div>
-
-        <button class="back-btn mt-4" onclick="showSection('inicio')">Volver al inicio</button>
       </div>
     </section>
-
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Álvaro Domínguez Mora. Diseñado con código limpio.</p>
+    <p>Diseñado y desarrollado por Álvaro Domínguez Mora &copy; 2025</p>
   </footer>
 
-  <!-- Modal Video -->
   <div id="modalVideo" class="modal">
-    <div class="modal-content">
+    <div class="modal-content glass-card">
       <span class="close-btn" onclick="cerrarVideo()">&times;</span>
       <video id="videoProyecto" controls>
         <source src="vid/FuncionamientoApp1.mp4" type="video/mp4">
-        Tu navegador no soporta este video.
       </video>
     </div>
   </div>
 
   <script>
-    // Lógica limpia para mostrar/ocultar secciones sin reescribir el DOM
-    function showSection(sectionId) {
-      // Ocultar todas las secciones
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(sec => {
-        sec.classList.remove('active');
-      });
-
-      // Mostrar la sección solicitada
-      const activeSection = document.getElementById(sectionId);
-      if (activeSection) {
-        activeSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
       }
-    }
+    });
 
-    // Funciones del Modal de vídeo
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+      revealOnScroll.observe(el);
+    });
+
     function abrirVideo() {
-      document.getElementById('modalVideo').style.display = 'flex';
+      const modal = document.getElementById('modalVideo');
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 10);
     }
 
     function cerrarVideo() {
@@ -261,7 +252,10 @@
       const video = document.getElementById('videoProyecto');
       video.pause();
       video.currentTime = 0;
-      modal.style.display = 'none';
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
     }
   </script>
 </body>
